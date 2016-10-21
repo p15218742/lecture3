@@ -1,246 +1,257 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+	<title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css"><!--beige-->
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/moon.css"><!--beige-->
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
 
-		<style>
-			.reveal strong{
-				color: #5fabfc;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+	<style>
+		.reveal strong{ color: #5fabfc}
+		a:link { border-bottom: 2px solid #666; }
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
 
-				<!--<section data-markdown>
-				</section>-->
+			<section data-markdown>
+				## CTEC3905: Front-End Web Development
+				
+				# **Lecture 2** 
 
+				**Dave Everitt**: lectures & labs    
+				deveritt@dmu.ac.uk
+
+				**Fania Raczinski**: labs  
+				fania.raczinski@dmu.ac.uk
+			</section>
+
+			<section>
 				<section data-markdown>
-					# CTEC3905
-					## **Front-End Web Development**
-					### Lecture 1
+					# LOOKING BACK - **1**
+
+					- **indent** your code properly (2 spaces)!
+					- **Assignment 0 is ongoing**—we can't catch you up!
+					- *Always* check Blackboard weekly
+					- *Always* read the links provided on Blackboard
 				</section>
 
 				<section data-markdown>
-					# Staff Contact
-
-					**Dave Everitt**  
-					lectures & labs  
-					deveritt@dmu.ac.uk
-
-					**Fania Raczinski**  
-					labs  
-					fania.raczinski@dmu.ac.uk
-				</section>
-
-				<section>
-
-					<section data-markdown>
-						# Assignments
-
-						|||||
-						|:--|:--|---|---|
-						|0|Ongoing|**10%**|-|
-						|1|Essay|**30%**|week 7|
-						|2|Project|**60%**|week 23|
-					</section>
-
-					<section data-markdown>
-						## Assignment is **ongoing**
-						
-						we can’t “catch you up”…
-					</section>
-
-					<section data-markdown>
-						## BUT
-						
-						**EVERYTHING** is on Blackboard, so use it!
-					</section>
-
-				</section>
-
-				<section data-markdown>
-					# Essay
+					# LOOKING BACK - **2**
 					
-					**Deadline: week 7 (Fri 18 Nov 16, 12 noon)**
+					**Learning outcomes from labs 1–3**
 
-					- 2000–3000 words
+					- basic knowledge of new **HTML5** tags and how to use them
+					- some fundamental **CSS3** concepts and skills
+
+					If you’re struggling, or want a complete catch-up, we can upload a 2nd yr tutorial?
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					# LOOKING FORWARD - **1**
+
+					**Module feedback**
+
+					- There will be a *module feedback form* on BB in week 5
+					- Complete the [informal online questionnaire](https://deveritt.typeform.com/to/uUzysR) so we can find out more about your knowledge
+
+					**GitHub for course materials**
+					
+					- Open a GitHub account
+					- Email us your username for an invite to the module organisation (will be used to upload project next term)
+					- Use GitHub for your final year project too!
+				</section>
+				
+				<section data-markdown>
+					# LOOKING FORWARD - **2**
+					
+					**Assignment 1 (Turnitin): wk 7 (Fri 18/11/2016, 12 noon)**
+
+					- Essay, 2000–3000 words
 					- Analyse and evaluate 3–4 websites
-					- *Subject* (e.g. portfolios, sports, gaming, media, commerce…)
+					- *Subject* (e.g. portfolios, technology, sports, gaming, media, commerce…)
 					- *Technology* (e.g. Javascript, HTML5 Canvas, CSS3 animations…)
+					- *Usability and accessibility* (research and use references)
+					- [details and marking criteria on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3415918_1)
 				</section>
 
 				<section data-markdown>
-					# Project
+					# LOOKING FORWARD - **3**
 					
-					**Deadline: week 23 (Fri 10 Mar 17, 12 noon)**
-						
-					1. final project code
-					2. plans and sketches
-					3. annotations, comments, references 
-					4. a brief essay (400–600 words + screenshots)
+					- you have **4 more weeks** to complete this
+					- bring **ideas to the labs** and we can give feedback
+					- in week 5 labs we will go over an **example essay** from last year
+					
 				</section>
 
 				<section data-markdown>
-					# Feedback Week 1
+					# LOOKING FORWARD - **4**
 
-					- JavaScript
-					- HTML
-					- Animation
-					- Websites
-					- Creativity
-					- Freedom
+					| **Week/Date** | **Content** |
+          |:--|:--|
+					| 4 -	24 Oct | mobile-first and responsive design |
+					| 5	- 31 Oct | help with assignment 1 essay |
+					|            | ***Lecture:*** Information Architecture, design principles |
+					| 6	- 7 Nov  | ENHANCEMENT WEEK |
+					| 7	- 14 Nov | essay final check, Markdown/HTML option? |
+				  |            | ***Lecture:*** using 3rd-party code (??) |
+
 				</section>
+			</section>
 
-				<section>
-					<section data-markdown style="text-align: left">
-						# Overview
+			<section>
+				<section style="text-align: left;">
 
-						a **broad knowledge** of current front-end web technologies, how these have evolved and what part they play in **modern** web development
+					<h1 style="text-align: center">A CSS rule { }</h1>
+					
+					<code><span style="color: #f66">selector</span> { <span style="color: #666">/* element, ID, class, pseudo */</span><br>
+					&nbsp;&nbsp;<span style="color: #6f6">property</span>: <span style="color: #66f">value</span>;<br>
+					}</code>
 
-						an ability to use **HTML5**, **CSS3** and **Javascript** in an **industry standards-compliant** and knowledgeable manner
-
-						an understanding of the **cultures and decisions** driving current front-end web technologies
-
-						*more…*
-					</section>
-					<section data-markdown style="text-align: left">
-						a grasp of **basic design principles** and how these affect usability and user interface (UI) design
-
-						a basic understanding of **Information Architecture** and how this determines navigability, usability and website/webapp structure
-
-						best practice in **general software development** (e.g. version control)
-
-						an ability to **critically evaluate** internet technologies and languages
-					</section>
+					<p>Together, the <strong>property</strong> and <strong>value</strong> are a CSS <strong>declaration</strong></p>
 				</section>
 
 				<section data-markdown>
-					# Blackboard
-
-					- lab materials (if there's a specific exercise)
-					- lecture notes
-					- recommended resources and links
-					- recommended books
-					- code snippets and examples (github)
-					- Module calendar
+					# CSS selector types
+					
+					- [List of selectors](http://www.w3schools.com/cssref/css_selectors.asp) (W3Schools)
+					- [Interactive page of CSS selectors](http://www.w3schools.com/cssref/trysel.asp) (W3Schools)
 				</section>
 
 				<section data-markdown>
-					# Tools
+					# CSS good practice - **1**
 
-					- code editor (see blackboard, "Labs")
-					- browser tools (inspect element, console...)
-					- your machines:
-						- editor
-						- command-line installs
-						- labs vs home
-				</section>
-
-				<section>
-					<section data-markdown>
-						# A brief history of HTML
-
-						- SGML as the basis (title, p, h1-6, ol, ul...)
-						- 1965 Ted Nelson, hyperlink
-						- Bill Atkinson, Apple’s *Hypercard* (local links only)
-						- HTML devised by Tim Berner-Lee (TBL) when at CERN
-						- TBL creates HTML/www on NeXT (for researchers  to work together) 
-						- 1989 global hypertext project, to be known as the World Wide Web (www) 
-						- The Internet first carries the www in 1991
-
-						<small>
-							<a href="https://www.w3.org/People/Raggett/book4/ch02.html)">Dave Raggett “A history of HTML”</a> (co-editor, HTML 4 specification)
-						</small>
-					</section>		
-
-					<section data-markdown>
-						# The first visual web browser (1993)
-						
-						[The **Mosaic** web browser](https://www.w3.org/MarkUp/tims_editor)
-					</section>		
-
-					<section>
-						<iframe style="height:640px; width:100%" src="https://www.w3.org/MarkUp/tims_editor"></iframe>
-					</section>		
-				</section>		
-
-				<section data-markdown>
-					# Intro
-
-					**[I want to be a Web Developer](https://www.quora.com/I-want-to-be-a-web-developer-but-I-know-absolutely-nothing-about-it-What-should-I-learn-and-how-and-where-can-I-learn-it/answer/Dave-Everitt?srid=2K0v\)**
+					**definites**
+				 
+					- The universal selector **`*`** is slow
+					- Avoid **`!important`**. It means the specificity of your CSS is out of control
+					- No trailing zeros in values e.g. **`2em`** not **`2.0em`**
+					- Use hyphens, not underscores, for multi-word ID or class names
+					- After general styles, order styles as they appear in the source code
 				</section>
 
 				<section data-markdown>
-					# **Demo:** CSS
+					# CSS good practice - **2**
 
-					Module handbook styles
-				</section>		
+					**hmmm… not sure about these!**
+				 
+					- Avoid 'float'. Floats lead to fragile CSS that can break if one layout aspect changes
+					- Selectors should not contain IDs because these rules are too tightly coupled with HTML
+
+					**In doubt?**
+					
+					See [Google's CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml#CSS_Style_Rules) and [CSS Formatting Rules](https://google.github.io/styleguide/htmlcssguide.xml#CSS_Formatting_Rules)
+				</section>
+
+			</section>
+
+			<section>
+				<section data-markdown style="text-align: left;">
+					# Responsive design: **0**
+          
+					- mobile first
+					- responsive design and breakpoints
+
+					**Books**
+
+					[Luke Wroblewski, 'Mobile First’](http://abookapart.com/products/mobile-first)  
+					[Ethan Marcotte, 'Responsive Web Design’](http://abookapart.com/products/responsive-web-design)
+				</section>
 
 				<section data-markdown>
-					# **Demo:** Box Model
+					# Responsive design: **1**
+					
+					## Natural breakpoints
 
-					- padding, border, margin
-					- Floats
-					- Percentages
-					- Inline-block, text-align center
-					- Flexbox
-					- box-sizing: border-box
-					- positioning?
+					The best approach to responsive design uses [natural breakpoints](http://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile/20350990#20350990) over fixed device screen sizes.
+
+					Design **mobile-first**, then increase the screen width.
+
+					Add **breakpoints** at the viewport sizes where the design becomes "broken".
 				</section>
-			</div>
+
+				<section data-markdown>
+					# Responsive design: **2**
+
+					## Percentages
+
+					Percentages work well for setting the element widths, as long as you use **`display: border-box`** to ensure padding and borders remain *inside* the element’s width.
+				</section>
+
+				<section data-markdown style="text-align: left;">
+					# Responsive design: **3**
+					
+					##links
+					
+					- [Responsive Web Design (Ethan Marcotte, 2010)](http://alistapart.com/article/responsive-web-design)
+					- [Responsive Web Design Basics (Google 2016)](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/)
+					- [Responsive animations (less reading more looking 2014)](http://www.fastcodesign.com/3038367/9-gifs-that-explain-responsive-design-brilliantly)
+					- [HTML Responsive Web Design (W3 Schools)](http://www.w3schools.com/html/html_responsive.asp)
+					- [Am I Responsive (with example site)](http://ami.responsivedesign.is/?url=https%3A%2F%2Fswitchoff.nus.org.uk#)
+					- [This Is Responsive (overload: patterns and resources)](http://bradfrost.github.io/this-is-responsive/)
+				</section>
+			</section>
+
+			<section data-markdown>
+					# CSS **demo** (yay!)
+					
+					- Basic responsive example with two breakpoints
+					- Simple CSS-only responsive menu 
+
+			</section>
+
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-				controls: true,
-				progress: true,
-				center: true,
-				touch: true,
-				keyboard:true,
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			controls: true,
+			progress: true,
+			center: true,
+			touch: true,
+			keyboard:true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-					// { src: 'plugin/menu/menu.js'}
-				],
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+				// { src: 'plugin/menu/menu.js'}
+			],
 
-				menu: {
-					themes: false,
-					transitions: false
-				}
-			});
-		</script>
-	</body>
+			menu: {
+				themes: false,
+				transitions: false
+			}
+		});
+	</script>
+</body>
 </html>

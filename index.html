@@ -1,10 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>CTEC3905 Lecture 03: Information Architecture and design principles</title>
+
+	<meta name="description" content="Information Architecture and design principles">
+	<meta name="author" content="Dave Everitt">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/moon.css"><!--beige-->
@@ -24,6 +32,7 @@
 	<style>
 		.reveal strong{ color: #5fabfc}
 		a:link { border-bottom: 2px solid #666; }
+		code { color: #9f9; }
 	</style>
 </head>
 <body>
@@ -33,7 +42,7 @@
 			<section data-markdown>
 				## CTEC3905: Front-End Web Development
 				
-				# **Lecture 2** 
+				# **Lecture 3** 
 
 				**Dave Everitt**: lectures & labs    
 				deveritt@dmu.ac.uk
@@ -44,77 +53,51 @@
 
 			<section>
 				<section data-markdown>
-					# LOOKING BACK - **1**
+					# REMINDERS - **1**
 
-					- **indent** your code properly (2 spaces)!
-					- **Assignment 0 is ongoing**—we can't catch you up!
-					- *Always* check Blackboard weekly
-					- *Always* read the links provided on Blackboard
+					- **indent your code** properly (with 2 spaces)!
+					- **Assignment 0 is ongoing**—engage!
+					- **Check DMU email** regularly
+					- **Revise the links** on Blackboard and in lecure slides
+					- **Open a GitHub account** and email us your username
+
 				</section>
 
 				<section data-markdown>
-					# LOOKING BACK - **2**
-					
-					**Learning outcomes from labs 1–3**
+					# REMINDERS - **2**
 
-					- basic knowledge of new **HTML5** tags and how to use them
-					- some fundamental **CSS3** concepts and skills
-
-					If you’re struggling, or want a complete catch-up, we can upload a 2nd yr tutorial?
+					- For more **HTML and CSS learning**, use [the 2nd yr book](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3472567_1 "There's a *limited edition* with a kitten on the cover")
+					- Complete the [module feedback form](https://vle.dmu.ac.uk/webapps/assessment/take/launchAssessment.jsp?course_id=_441585_1&content_id=_3478394_1&mode=view) if you haven't already
+					- Complete the [informal online questionnaire](https://deveritt.typeform.com/to/uUzysR) so we can find out more about your knowledge
 				</section>
 			</section>
 
-			<section>
+			<section style="text-align: left;">
 				<section data-markdown>
-					# LOOKING FORWARD - **1**
-
-					**Module feedback**
-
-					- There will be a *module feedback form* on BB in week 5
-					- Complete the [informal online questionnaire](https://deveritt.typeform.com/to/uUzysR) so we can find out more about your knowledge
-
-					**GitHub for course materials**
+					# ASSIGNMENT 1: ESSAY - **1**
 					
-					- Open a GitHub account
-					- Email us your username for an invite to the module organisation (will be used to upload project next term)
-					- Use GitHub for your final year project too!
+					**Javascript is coming, but for now…**
+
+					- we don’t expect you to understand it in your essay
+					- look out for `&lt;script&gt;` tags in source code
+					- examine `.css` and `.js` source code for information
+
 				</section>
 				
 				<section data-markdown>
-					# LOOKING FORWARD - **2**
+					# ASSIGNMENT 1: ESSAY - **2**
 					
-					**Assignment 1 (Turnitin): wk 7 (Fri 18/11/2016, 12 noon)**
+					**Deadline: Turnitin, wk 7 (Fri 18/11/2016, 12 noon)**
 
-					- Essay, 2000–3000 words
-					- Analyse and evaluate 3–4 websites
-					- *Subject* (e.g. portfolios, technology, sports, gaming, media, commerce…)
-					- *Technology* (e.g. Javascript, HTML5 Canvas, CSS3 animations…)
-					- *Usability and accessibility* (research and use references)
-					- [details and marking criteria on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3415918_1)
+					2000–3000 word analysis of 3–4 websites
+
+					- **Show an understanding** of web technologies
+					- **Use structure** in your essay
+					- **Find references** to back up your statements
+					
+					**DRY:** [Details and marking criteria on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3415918_1 "*Don't repeat* what's on Blackboard")
 				</section>
 
-				<section data-markdown>
-					# LOOKING FORWARD - **3**
-					
-					- you have **4 more weeks** to complete this
-					- bring **ideas to the labs** and we can give feedback
-					- in week 5 labs we will go over an **example essay** from last year
-					
-				</section>
-
-				<section data-markdown>
-					# LOOKING FORWARD - **4**
-
-					| **Week/Date** | **Content** |
-          |:--|:--|
-					| 4 -	24 Oct | mobile-first and responsive design |
-					| 5	- 31 Oct | help with assignment 1 essay |
-					|            | ***Lecture:*** Information Architecture, design principles |
-					| 6	- 7 Nov  | ENHANCEMENT WEEK |
-					| 7	- 14 Nov | essay final check, Markdown/HTML option? |
-				  |            | ***Lecture:*** using 3rd-party code (??) |
-
-				</section>
 			</section>
 
 			<section>

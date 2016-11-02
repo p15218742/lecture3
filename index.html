@@ -33,6 +33,15 @@
 		.reveal strong{ color: #5fabfc}
 		a:link { border-bottom: 2px solid #666; }
 		code { color: #9f9; }
+		.reveal h1 { line-height: 1em; }
+		.ia-diagram { position: relative; box-sizing: border-box; padding: 8px; width: 360px; height: 350px; background: #ccc; color: #666; float: left; }
+		.ia-diagram div {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			box-sizing: border-box;
+			border-radius: 50%;
+		}
 	</style>
 </head>
 <body>
@@ -100,105 +109,216 @@
 
 			</section>
 
-			<section>
-				<section style="text-align: left;">
-
-					<h1 style="text-align: center">A CSS rule { }</h1>
+			<section style="text-align: left;">
+				<section data-markdown>
+					# 4 Basic Design Principles
 					
-					<code><span style="color: #f66">selector</span> { <span style="color: #666">/* element, ID, class, pseudo */</span><br>
-					&nbsp;&nbsp;<span style="color: #6f6">property</span>: <span style="color: #66f">value</span>;<br>
-					}</code>
+					- **P**roximity
+					- **A**lignment
+					- **R**epetition
+					- **C**ontrast
 
-					<p>Together, the <strong>property</strong> and <strong>value</strong> are a CSS <strong>declaration</strong></p>
+					(The reverse of ‘**CRAP**’)
+
 				</section>
 
 				<section data-markdown>
-					# CSS selector types
+					# **P**roximity
+					- Related items belong together
+					- The proximity of items creates groups
 					
-					- [List of selectors](http://www.w3schools.com/cssref/css_selectors.asp) (W3Schools)
-					- [Interactive page of CSS selectors](http://www.w3schools.com/cssref/trysel.asp) (W3Schools)
+					**Proximity** sets up *visual cues* that order similar items into groups, suggesting how to ‘read’ content.
+					
+					- Connect **grouped items** by using one style
+					- Sort **complex content** into groups for legibility
+
+					The [BBC iPlayer website](http://www.bbc.co.uk/iplayer) uses proximity and containment to group related items
+
+					The Guardian website groups ‘most popular’ news stories
+
 				</section>
+
+				<section data-background-image="images/bbc-iplayer.png" data-background-size="900px"></section>					
+				<section data-background-image="images/guardian.png" data-background-size="900px"></section>					
 
 				<section data-markdown>
-					# CSS good practice - **1**
+					# **A**lignment
 
-					**definites**
-				 
-					- The universal selector **`*`** is slow
-					- Avoid **`!important`**. It means the specificity of your CSS is out of control
-					- No trailing zeros in values e.g. **`2em`** not **`2.0em`**
-					- Use hyphens, not underscores, for multi-word ID or class names
-					- After general styles, order styles as they appear in the source code
+					- Nothing should be placed on the page arbitrarily
+					- Every item is connected visually with other page elements
+
+					Alignment enables page elements to be seen as **part of the whole**, creating a **holistic feel** to all the various pieces of information.
+
+					A strict use of alignment on the [Oslo-based design agency Heydays](http://heydays.no/) gives a pleasing sense of coherence and simplicity.
 				</section>
+
+				<section data-background-image="images/heydays.jpg" data-background-size="800px"></section>					
+
+				<section data-markdown style="text-align: left;">
+					# **A**lignment: grids
+
+					Grids are the **primary method** for achieving **alignment**.
+
+					- **The core text** on the history and use of grids in design is: Khoi Vinh and Mark Boulton (2007) [Grids Are Good](http://www.slideshare.net/huer1278ft/grids-are-good-right)
+
+					Also see Vitaly Friedman (2007) [Designing With Grid-Based Approach](https://www.smashingmagazine.com/2007/04/designing-with-grid-based-approach/), Smashing Magazine
+				</section>
+
+				<section data-background-image="images/grids/grid-01.jpg" data-background-size="800px"></section>					
+				<section data-background-image="images/grids/grid-02.jpg" data-background-size="800px"></section>					
 
 				<section data-markdown>
-					# CSS good practice - **2**
+					# **R**epetition
 
-					**hmmm… not sure about these!**
-				 
-					- Avoid 'float'. Floats lead to fragile CSS that can break if one layout aspect changes
-					- Selectors should not contain IDs because these rules are too tightly coupled with HTML
+					- Repeat **design themes** throughout the interface
+					- Repetition provides **consistency** across design elements
+					- Consistent sizing and proportions strengthen **style**
 
-					**In doubt?**
+					Use:
 					
-					See [Google's CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml#CSS_Style_Rules) and [CSS Formatting Rules](https://google.github.io/styleguide/htmlcssguide.xml#CSS_Formatting_Rules)
+					- site-wide **templates** and **partials** for consistency
+					- **style rules** for content e.g. common image sizes (at least widths), matching heading styles…
 				</section>
+
+				<section data-background-image="images/karl-anders.jpg" data-background-size="700px"></section>					
+				<section data-background-image="images/creative-depart.jpg" data-background-size="700px"></section>					
+
+				<section data-markdown>
+					# **C**ontrast
+
+					- if two items are distinctly different, make them look different. Really different!
+					- Contrast is used to make your work look more visually interesting
+
+					There are many ways to **CREATE CONTRAST**. For example: colour, fonts, rules, column widths etc.
+
+					- Javascript plugin site [unheap.com](http://www.unheap.com/) uses bold colours
+					- Design agency [Touch](http://www.thetouchagency.co.uk/) uses transitions on hover
+
+				</section>
+
+				<section data-background-image="images/unheap.png" data-background-size="900px"></section>					
+				<section data-background-image="images/touch-website.png" data-background-size="900px"></section>					
 
 			</section>
 
 			<section>
-				<section data-markdown style="text-align: left;">
-					# Responsive design: **0**
+				<section data-markdown>
+					# INFORMATION ARCHITECTURE (IA): **1**
           
-					- mobile first
-					- responsive design and breakpoints
-
-					**Books**
-
-					[Luke Wroblewski, 'Mobile First’](http://abookapart.com/products/mobile-first)  
-					[Ethan Marcotte, 'Responsive Web Design’](http://abookapart.com/products/responsive-web-design)
-				</section>
-
-				<section data-markdown>
-					# Responsive design: **1**
-					
-					## Natural breakpoints
-
-					The best approach to responsive design uses [natural breakpoints](http://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile/20350990#20350990) over fixed device screen sizes.
-
-					Design **mobile-first**, then increase the screen width.
-
-					Add **breakpoints** at the viewport sizes where the design becomes "broken".
-				</section>
-
-				<section data-markdown>
-					# Responsive design: **2**
-
-					## Percentages
-
-					Percentages work well for setting the element widths, as long as you use **`display: border-box`** to ensure padding and borders remain *inside* the element’s width.
+					> If you’ve ever tried to use something and thought, “where am I supposed to go next?” or “this doesn’t make any sense,” you are encountering an issue with an information architecture.  
+					—[What is Information Architecture?](http://www.iainstitute.org/what-is-ia)
 				</section>
 
 				<section data-markdown style="text-align: left;">
-					# Responsive design: **3**
+					## What is **IA**?
 					
-					##links
-					
-					- [Responsive Web Design (Ethan Marcotte, 2010)](http://alistapart.com/article/responsive-web-design)
-					- [Responsive Web Design Basics (Google 2016)](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/)
-					- [Responsive animations (less reading more looking 2014)](http://www.fastcodesign.com/3038367/9-gifs-that-explain-responsive-design-brilliantly)
-					- [HTML Responsive Web Design (W3 Schools)](http://www.w3schools.com/html/html_responsive.asp)
-					- [Am I Responsive (with example site)](http://ami.responsivedesign.is/?url=https%3A%2F%2Fswitchoff.nus.org.uk#)
-					- [This Is Responsive (overload: patterns and resources)](http://bradfrost.github.io/this-is-responsive/)
+					- The **art and science** of structuring and classifying websites/intranets to help people find and manage information
+					- A **discipline** and community of practice bringing principles of design and architecture to online development
 				</section>
-			</section>
 
-			<section data-markdown>
-					# CSS **demo** (yay!)
+				<section style="text-align: left;">
+					<h2>How did <strong>IA</strong> begin?</h2>
+
+					<img style="float:left;" src="images/ia/information-architecture-book.jpg" alt="IA book cover">
+
+					<p style="width: 58%; float: right; margin-top: .2em;">In 1998 Peter Morville and co-author Louis Rosenfeld wrote <a href="https://wordery.com/information-architecture-louis-rosenfeld-9781491911686?currency=GBP" title="Cheapest copy we could find">Information Architecture for the World Wide Web</a>
+					<br>
+					(4th edition 2015)
+					<br>
+					<br>
+					Known as <em>The Polar Bear Book</em> it is considered to be <strong>the</strong> essential text on the subject.</p>
+				</section>
+
+				<section>
+					<h1>IA: <strong>2</strong></h1>
+          
+					<div class="ia-diagram">
+						<div style="left: 76px; background: rgba(256,100,100,0.5); line-height: 170px;">Users</div>
+						<div style="bottom: 8px; left: 8px; background: rgba(100,256,100,0.5); line-height: 240px; transform: rotate(32deg);">Content</div>
+						<div style="bottom: 8px; right: 8px; background: rgba(100,100,256,0.5); line-height: 240px; transform: rotate(-32deg);">Context</div>
+					</div>
+
+					<ul style="width: 56%; margin-left: 10px; margin-top: -0.28em; float: right;">
+						<li><strong>Users</strong>: who they are, what are their information-seeking behaviours and needs</li>
+						<li><strong>Content</strong>: volume, format, metadata, structure, labels (e.g. menus)</li>
+						<li><strong>Context</strong>: business model, aim of website, cultural background, constraints</li>
+					</ul>
+
+				</section>
+
+				<section data-background-image="images/ia/rosenfeld-users-content-context.png" data-background-size="800px"></section>					
+
+				<section data-markdown>
+					# IA: **3**
+
+					## Origins: **library science**
 					
-					- Basic responsive example with two breakpoints
-					- Simple CSS-only responsive menu 
+					- The development of “knowledge-organization systems”
+					- Study of how to categorize, catalogue, locate resources
+					
+				</section>
 
+				<section data-markdown>
+					# IA: **4**
+
+					## Origins: **Cognitive Psychology**
+					
+					- **Cognitive load**: how much information we can process at any time—avoiding information overload.
+					- **Mental models**: the assumptions users have—information is easier to discover in familiar places.
+					- **Decision making**: the cognitive process of making a choice or selecting an option—IA helps make decisions by providing contextual information at key points.
+
+					[Complete Beginners Guide to Information Architecture](http://www.uxbooth.com/articles/complete-beginners-guide-to-information-architecture/)
+
+				</section>
+
+				<section data-markdown>
+					# IA: **5**
+
+					## the information backbone of a website
+					
+					- **Content inventory/audit**  
+					  locate and identify and check site content
+					- **Information grouping**  
+					  connect content with user-centered relationships
+					- **Taxonomy development**  
+					  a controlled vocabulary throughout  
+
+					[The Difference Between IA and Navigation](https://www.nngroup.com/articles/ia-vs-navigation/)  
+					—Jennifer Cardello, June 22, 2014
+
+				</section>
+
+				<section data-markdown style="text-align: left;">
+					# IA: **6**
+					
+					## What is Architecture?
+
+					From Cal Henderson, [Building Scalable Web Sites](http://shop.oreilly.com/product/9780596102357.do) (2006)
+
+					**if buildings were like software**, the architect would be involved in the actual building process, from laying the foundations right through to installing the fixtures. …starting with a couple of rooms and some basic amenities, some people would… start living there before the building was complete. When it looked like the building work was about to finish …more people would turn up and start living there, too.
+				</section>
+
+				<section data-markdown style="text-align: left;">
+					But these new residents would need **new features**—more bedrooms… a swimming pool, a basement, and so on. The architect would design these new rooms and features, augmenting the original design. But when it came to building them, the **current residents wouldn't leave**. They'd continue living in the house even while it was extended, all the time complaining about the noise and dust from the building work.
+
+					In fact, against all reason, **more people would move in** while the extensions were being built. By the time the modifications were complete, more would be needed to house the newcomers and keep them happy.
+				</section>
+
+				<section data-markdown style="text-align: left;">
+					## Planning
+					
+					The key… is **planning for these issues from the beginning**. If the architect … started out by building a huge, complex house, it would be overkill. By the time it was ready, the residents would have gone elsewhere to live in a smaller house built in a fraction of the time.
+
+					If we build in such a way that extending our house takes too long then our residents might move elsewhere, We need to know how to start at the right scale and allow our house to be **extended as painlessly as possible**.
+				</section>
+
+				<section data-markdown style="text-align: left;">
+					## Minimize effort
+
+					That's not to say that we're going to get anything right the first time. In the scaling of a typical application, every aspect and feature is probably going to be revisited and refactored.
+
+					That's fine—the task of an application architect is to **minimize the time it takes to refactor each component**, through careful initial and ongoing design.
+				</section>
 			</section>
 
 		</div>
@@ -215,7 +335,9 @@
 			progress: true,
 			center: true,
 			touch: true,
-			keyboard:true,
+			keyboard: true,
+			maxScale: 0.82,
+			previewLinks: false,
 
 			transition: 'slide', // none/fade/slide/convex/concave/zoom
 

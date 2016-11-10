@@ -33,8 +33,25 @@
 		.reveal strong{ color: #5fabfc}
 		a:link { border-bottom: 2px solid #666; }
 		code { color: #9f9; }
+		.left-align { text-align: left; }
 		.reveal h1 { line-height: 1em; }
-		.ia-diagram { position: relative; box-sizing: border-box; padding: 8px; width: 360px; height: 350px; background: #ccc; color: #666; float: left; }
+		.reveal ul { margin-bottom: .5em; }
+		.reveal li { padding-top: .5em; }
+		.reveal blockquote {
+			text-align: left;
+			padding: .25em 1.5em .5em;
+		}
+		.ia-diagram {
+			position: relative;
+			box-sizing: border-box;
+			top: .6em;
+			padding: 8px;
+			width: 360px;
+			height: 350px;
+			background: #ccc;
+			color: #666;
+			float: left;
+		}
 		.ia-diagram div {
 			position: absolute;
 			width: 200px;
@@ -80,7 +97,7 @@
 				</section>
 			</section>
 
-			<section style="text-align: left;">
+			<section class="left-align">
 				<section data-markdown>
 					# ASSIGNMENT 1: ESSAY - **1**
 					
@@ -106,7 +123,7 @@
 				</section>
 			</section>
 
-			<section style="text-align: left;">
+			<section class="left-align">
 				<section data-markdown>
 					# 4 Basic Design Principles
 					
@@ -120,12 +137,10 @@
 
 				<section data-markdown>
 					# **P**roximity
-					- Related items belong together
-					- The proximity of items creates groups
-					
-					**Proximity** sets up *visual cues* that order similar items into groups, suggesting how to ‘read’ content.
-					
-					- Connect **grouped items** by using one style
+					**Proximity** sets up *visual cues* that group similar items, suggesting how to ‘read’ content.
+
+					- Group **related items** with each other
+					- Use **common styles** to connect grouped items
 					- Sort **complex content** into groups for legibility
 
 					The [BBC iPlayer website](http://www.bbc.co.uk/iplayer) uses proximity and containment to group related items
@@ -149,14 +164,13 @@
 
 				<section title="An obvious example of a grid-based website" data-background-image="images/heydays.jpg" data-background-size="800px"><div>&nbsp;</div></section>					
 
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					# **A**lignment: grids
 
 					Grids are the **primary method** for achieving **alignment**.
 
 					- **The core text** on the history and use of grids in design is: Khoi Vinh and Mark Boulton (2007) [Grids Are Good](http://www.slideshare.net/huer1278ft/grids-are-good-right)
-
-					Also see Vitaly Friedman (2007) [Designing With Grid-Based Approach](https://www.smashingmagazine.com/2007/04/designing-with-grid-based-approach/), Smashing Magazine
+					- Also see Vitaly Friedman (2007) [Designing With Grid-Based Approach](https://www.smashingmagazine.com/2007/04/designing-with-grid-based-approach/), Smashing Magazine
 				</section>
 
 				<section title="An example image of a column-based grid" data-background-image="images/grids/grid-01.jpg" data-background-size="800px"><div>&nbsp;</div></section>					
@@ -181,13 +195,13 @@
 				<section data-markdown>
 					# **C**ontrast
 
-					- if two items are distinctly different, make them look different. Really different!
-					- Contrast is used to make your work look more visually interesting
+					- Make **distinctly different** items *look* different
+					- Contrast makes content appear **visually inviting**
 
-					There are many ways to **CREATE CONTRAST**. For example: colour, fonts, rules, column widths etc.
+					There are many ways to create contrast. For example: *colour, fonts, rules, column widths*, etc.
 
-					- Javascript plugin site [unheap.com](http://www.unheap.com/) uses bold colours
-					- Design agency [Touch](http://www.thetouchagency.co.uk/) uses transitions on hover
+					- Javascript plugin site [unheap.com](http://www.unheap.com/) uses **bold colours**
+					- Design agency [Touch](http://www.thetouchagency.co.uk/) uses **hover transitions**
 				</section>
 
 				<section title="A striking use of multiple kinds of contrast" data-background-image="images/unheap.png" data-background-size="900px"><div>&nbsp;</div></section>					
@@ -203,16 +217,16 @@
 					—[What is Information Architecture?](http://www.iainstitute.org/what-is-ia)
 				</section>
 
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					## What is **IA**?
 					
-					- The **art and science** of structuring and classifying websites/intranets to help people find and manage information
+					- The **art and science** of structuring and classifying websites/intranets/apps to help people find and manage information
 					- A **discipline** and community of practice bringing principles of design and architecture to online development
 
 					Entire university courses cover Information Architecture—[search for "library science and information architecture"](https://www.google.co.uk/search?q=librry+science+and+information+archtectre&oq=librry+science+and+information+archtectre&aqs=chrome..69i57.7711j0j7&sourceid=chrome&ie=UTF-8#q=library+science+and+information+architecture)
 				</section>
 
-				<section style="text-align: left;">
+				<section class="left-align">
 					<h2>How did <strong>IA</strong> begin?</h2>
 
 					<img style="float:left;" src="images/ia/information-architecture-book.jpg" alt="Information Architecture book cover">
@@ -228,8 +242,8 @@
 				<section data-markdown>
 					## Origins: **library science**
 					
-					- The development of “knowledge-organization systems”
-					- Study of how to categorize, catalogue, locate resources
+					- The development of “**knowledge-organization** systems”
+					- Study of how to **categorize**, **catalogue**, **locate** resources
 				</section>
 
 				<section data-markdown>
@@ -251,6 +265,7 @@
 						<div style="left: 76px; top: 8px; background: rgba(256,100,100,0.5); line-height: 170px;">Users</div>
 						<div style="bottom: 8px; left: 8px; background: rgba(100,256,100,0.5); line-height: 240px; transform: rotate(32deg);">Content</div>
 						<div style="bottom: 8px; right: 8px; background: rgba(100,100,256,0.5); line-height: 240px; transform: rotate(-32deg);">Context</div>
+						<strong style="position: absolute; text-align: center; left: 43%; top: 44%; font-size: 1.5em; color: #444; text-shadow: 0 0 4px #fff">IA</strong>
 					</div>
 
 					<ul style="width: 56%; margin-left: 10px; margin-top: -0.28em; float: right;">
@@ -275,12 +290,11 @@
 				- **Taxonomy development**  
 					a controlled vocabulary throughout  
 
-				[The Difference Between IA and Navigation](https://www.nngroup.com/articles/ia-vs-navigation/)  
-				—Jennifer Cardello, June 22, 2014
+				Jennifer Cardello: [The Difference Between IA and Navigation](https://www.nngroup.com/articles/ia-vs-navigation/)  
 			</section>
 
 			<section>
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					# IA: **4**
 					
 					## What is Architecture?
@@ -290,31 +304,33 @@
 					**if buildings were like software**, the architect would be involved in the actual building process, from laying the foundations right through to installing the fixtures. …starting with a couple of rooms and some basic amenities, some people would… start living there before the building was complete. When it looked like the building work was about to finish …more people would turn up and start living there, too.
 				</section>
 
-				<section data-markdown style="text-align: left;">
-					But these new residents would need **new features**—more bedrooms… a swimming pool, a basement, and so on. The architect would design these new rooms and features, augmenting the original design. But when it came to building them, the **current residents wouldn't leave**. They'd continue living in the house even while it was extended, all the time complaining about the noise and dust from the building work.
+				<section data-markdown class="left-align">
+					## Building around users
 
-					In fact, against all reason, **more people would move in** while the extensions were being built. By the time the modifications were complete, more would be needed to house the newcomers and keep them happy.
+					…new residents would need **new features**—more bedrooms… a swimming pool, a basement… The architect would design these… features, augmenting the original design. But when it came to building them, the **current residents wouldn't leave**. They'd continue living in the house even while it was extended, all the time complaining about the noise and dust from the building work.
+
+					In fact… **more people would move in** while the extensions were being built. By the time the modifications were complete, more would be needed to house the newcomers and keep them happy.
 				</section>
 
-				<section data-markdown style="text-align: left;">
-					## Planning
+				<section data-markdown class="left-align">
+					## Plan from the start
 					
-					The key… is **planning for these issues from the beginning**. If the architect … started out by building a huge, complex house, it would be overkill. By the time it was ready, the residents would have gone elsewhere to live in a smaller house built in a fraction of the time.
+					The key… is **planning for these issues from the beginning**. If the architect … started out by building a huge, complex house, it would be **overkill**. By the time it was ready, the residents would have gone elsewhere to live in a smaller house built in a fraction of the time.
 
-					If we build in such a way that extending our house takes too long then our residents might move elsewhere, We need to know how to start at the right scale and allow our house to be **extended as painlessly as possible**.
+					If we build in such a way that extending our house takes too long then our **residents might move elsewhere**, We need to know how to start at the right scale and allow our house to be **extended as painlessly as possible**.
 				</section>
 
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					## Minimize effort
 
-					That's not to say that we're going to get anything right the first time. In the scaling of a typical application, every aspect and feature is probably going to be revisited and [refactored](http://www.refactoring.com/ "a change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior").
+					That's not to say that we're going to get anything right the first time. In the [scaling](https://www.nngroup.com/articles/scaling-user-interfaces/ "Scaling User Interfaces: An Information-Processing Approach to Multi-Device Design") of a typical application, every aspect and feature is probably going to be revisited and [refactored](http://www.refactoring.com/ "a change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its observable behavior").
 
 					That's fine—the task of an application architect is to **minimize the time it takes to [refactor](https://sourcemaking.com/refactoring "A big site about refactoring") each component**, through careful initial and ongoing design.
 				</section>
 			</section>
 
 			<section>
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					# Accessibility **1**
 
 					“Whatever your needs or preferences, there’s almost certainly a way to access the web.
@@ -325,43 +341,41 @@
 
 					…**This is a human rights issue**. Disabled people *need* these options in order to access the web.”
 
-					[The inaccessible web: how we got into this mess](https://uxdesign.cc/the-inaccessible-web-how-we-got-into-this-mess-7cd3460b8e32)  
-					Mischa Andrews (2016)
+					Mischa Andrews: [The inaccessible web](https://uxdesign.cc/the-inaccessible-web-how-we-got-into-this-mess-7cd3460b8e32)  
 				</section>
 
-				<section data-markdown style="text-align: left;">
-					“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect”
+				<section data-markdown>
+					> “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect”
 
 					Tim Berners-Lee (1997)  
 					[Web Accessibility Initiative announcement](https://www.w3.org/Press/IPO-announce)
 				</section>
 
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					## Facts and information
 
 					- **It’s been built into the web from the start**  
 					W3C (2005) [Introduction to Web Accessibility](https://www.w3.org/WAI/intro/accessibility.php)
-					- It’s the **law under the **Disability Equality Act (2010)**    
-					you could be [sued for discrimination](http://www.seqlegal.com/blog/website-accessibility-and-equality-act-2010) if your website does not meet certain [accessibility standards](https://www.abilitynet.org.uk/expert-resources/web-accessibility-resources)
+					- The **Disability Equality Act (2010)** is law—you could be [sued for discrimination](http://www.seqlegal.com/blog/website-accessibility-and-equality-act-2010) if your website does not meet certain [accessibility standards](https://www.abilitynet.org.uk/expert-resources/web-accessibility-resources)
 
-					“the duty to make reasonable adjustments requires service providers to take positive steps to ensure that disabled people can access services. This goes beyond simply avoiding discrimination. It requires service providers to anticipate the needs of potential disabled customers for reasonable adjustments.”  
-					[Disabled access to websites under UK law](http://www.out-law.com/page-330)
+					“the **duty to make reasonable adjustments** requires providers to **ensure disabled people can access services**. Service providers should **anticipate the needs** of potential disabled customers…”  
+					—adapted from [Disabled access to websites under UK law](http://www.out-law.com/page-330)
 				</section>
 			</section>
 
 			<section>
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					# Accessibility **2**
 
-					- Needs to be incorporated from the start of a project
-					- Get IA and navigation right and should also be accesible
-					- HTML5 semantic elements are crucial
+					- Needs to be **incorporated from the start** of a project
+					- Good **IA and navigation** help accessibility
+					- HTML5 **semantic elements** are crucial
 				</section>
 
-				<section data-markdown style="text-align: left;">
+				<section data-markdown class="left-align">
 					## Resources and research
 
-					- [WebAim](http://webaim.org/intro/)
+					- [WebAim](http://webaim.org/intro/)—**see this site first!**
 					- [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 					- [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)—see the [1st to 5th](https://www.w3.org/TR/aria-in-html/#first-rule-of-aria-use) rules!
 					- [How to Use ARIA Effectively with HTML5](https://www.sitepoint.com/how-to-use-aria-effectively-with-html5/)
@@ -385,7 +399,6 @@
 			keyboard: true,
 			maxScale: 0.82,
 			previewLinks: false,
-
 			transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 			// More info https://github.com/hakimel/reveal.js#dependencies
@@ -398,11 +411,11 @@
 				{ src: 'plugin/notes/notes.js', async: true }
 				// { src: 'plugin/menu/menu.js'}
 			],
-
-			menu: {
-				themes: false,
-				transitions: false
-			}
+			// see https://github.com/denehyg/reveal.js-menu
+			// menu: {
+			// 	themes: false,
+			// 	transitions: false
+			// }
 		});
 	</script>
 </body>

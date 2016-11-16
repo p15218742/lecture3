@@ -40,31 +40,15 @@
 			max-height: 436px;
 		}
 		.reveal li code { color: #9f9; font-size: 1em }
+		.reveal p code { color: #9f9; }
 		.left-align { text-align: left; }
 		.reveal h1 { line-height: 1em; }
 		.reveal ul { margin-bottom: .5em; }
-		/*.reveal li { padding-top: 0; }*/
+		.reveal li { padding-top: 0.15em; }
 		.reveal blockquote {
 			text-align: left;
 			padding: .25em 1.5em .5em;
 		}
-		.ia-diagram {
-			position: relative;
-			box-sizing: border-box;
-			top: .6em;
-			padding: 8px;
-			width: 360px;
-			height: 350px;
-			background: #ccc;
-			color: #666;
-			float: left;
-		}
-		.ia-diagram div {
-			position: absolute;
-			width: 200px;
-			height: 200px;
-			box-sizing: border-box;
-			border-radius: 50%;
 		}
 	</style>
 </head>
@@ -84,29 +68,19 @@
 				fania.raczinski@dmu.ac.uk
 			</section>
 
-			<section>
-				<section data-markdown>
-					# REMINDERS - **1**
+			<section data-markdown>
+				# Module feeeeeedback
 
-					- **indent your code** properly (with 2 spaces)!
-					- **Assignment 0 is ongoing**—turn up! Stay in lectures!
-					- **Check your DMU email** 3 times a week
-					- **Revise the links** on Blackboard and in lecture slides
-					- **GitHub** Open an account and **start pushing** code 
-				</section>
+				We haven’t collated the results yet.
 
-				<section data-markdown>
-					# REMINDERS - **2**
+				Too busy actually *doing* the module.
 
-					- For more **HTML and CSS learning**, use [the 2nd yr book](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3472567_1 "There's a *limited edition* with a kitten on the cover")
-					- your GitHub account should now be set up (see Blackboard for more info)
-					- got GIT on your own machine? See Blackboard
-				</section>
+				But apparently you **like** it.
 			</section>
 
 			<section>
 				<section data-markdown>
-					# The informal questionnaire **1**
+					# The questionnaire **1**
 
 					## What you think about front-end development
 
@@ -116,9 +90,31 @@
 				</section>
 
 				<section data-markdown>
-					# The informal questionnaire **2**
+					# The questionnaire **2**
 
-					<img src="images/questionnaire-device-access.png" alt="Front end dev questionnaire access by device">
+					How 21 of you accessed it
+
+					![Front end dev questionnaire access by device](images/questionnaire-device-access.png)
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					# REMINDERS 1: **AGAIN**
+
+					- **indent your code** properly (with 2 spaces)!
+					- **Assignment 0 is ongoing**—turn up! Stay in lectures!
+					- **Check your DMU email** 3 times a week
+					- **Revise the links** on Blackboard and in lecture slides
+				</section>
+
+				<section data-markdown>
+					# REMINDERS 2: **GIT**
+
+					GIT’s not GitHub
+
+					- got GitHub account? (see [GitHub setup on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3488035_1 "get GitHub set up and working"))
+					- got GIT on your own machine? See [Blackboard GIT info](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3474200_1 "some essential GIT links")
 				</section>
 			</section>
 
@@ -144,10 +140,10 @@
 				<section data-markdown>
 					# NEW RESOURCES: **1**
 
-					- flexbox on Blackboard/Resources
-					- set up your code editor on your own machine (see Blackboard)
-					- boilerplate code (Demo Emmet in VS Code)
-					- emerging features and browser prefixes (caniuse)
+					- [flexbox cheatsheet on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3474200_1) (under Resources)
+					- give your code editor *some love*! Like…
+					- boilerplate code (Demo [Emmet](http://emmet.io/) in VS Code)
+					- emerging features and browser prefixes ([caniuse](http://caniuse.com/))
 				</section>
 
 				<section data-markdown>
@@ -162,29 +158,59 @@
 				<section data-markdown>
 					# CSS ANIMATION: **1**
 
-					[CSS3 animation Property (W3Schools)](http://www.w3schools.com/cssref/css3_pr_animation.asp)
+					The [CSS `animation` property](http://www.w3schools.com/cssref/css3_pr_animation.asp) binds a custom animation to an element identified by it’s selector e.g.
 
-					Example: [animated movie posters](http://demo.marcofolio.net/3d_animation_css3/)
+					```css
+					.see-this {
+					  animation: amination-name-here 5s infinite;
+					}
+					```
+
+					The changes are user-defined in a separate  
+					`@keyframes` code block
 				</section>
 
 				<section data-markdown>
 					# CSS ANIMATION: **2**
+					
+					## KEYFRAMES
 
-					## components
+					```css
+					@keyframes change-stuff {
+						25% {
+							styles for 1/4 way through;
+						}
+						50% {
+							styles for 1/2 way through;
+						}
+						75% {
+							styles for 3/4 way through;
+						}
+					}
+					```
 
-					- transitions (what to change)
-					- transformations (shape-shifting)
-					- keyframes (custom timeline)
-
-					use separately or together
+					See [W3Schools CSS3 Animations](http://www.w3schools.com/css/css3_animations.asp)
 				</section>
 
 				<section data-markdown>
 					# CSS ANIMATION: **3**
 
-					## `transition`
+					## COMPONENTS
 
-					CSS properties change over a given time e.g.
+					- transitions (things to change)
+					- transformations (shape-shifting)
+					- keyframes (custom timeline)
+
+					use separately or together
+<!--TODO clarify how transform and keyframes differ-->
+				</section>
+
+				<section data-markdown>
+					# CSS ANIMATION: **4**
+
+					## TRANSITION
+
+					changes CSS properties over a given time e.g.
 
 					```css
 					transition: width 4s ease-in-out 1s;
@@ -192,49 +218,29 @@
 					```
 
 					**property**: the CSS to transition (comma-separated, all)  
-					**duration**: length of the transition (seconds/milliseconds s ms, infinite)  
-					**timing**-function: (optional) ‘speed curve’ of the transition  
-					**delay**: time before transition starts
+					**duration**: length of transition (secs/millisecs `s` `ms`, infinite)  
+					**timing-function**: (optional) ‘speed curve’ of the transition  
+					**delay**: (optional) time before transition starts
 
-					OMG TMI: [Easing functions](http://easings.net/)
-				</section>
-
-				<section data-markdown>
-					# CSS ANIMATION: **4**
-
-					```css
-					## `transform`
-					```
-
-					transform: rotate(70deg);
-
-					**translate**: transform: translate(540px,-200px);
-					**rotate(360deg)**    
-					**scale(2)**  
-					**skew**
+					OMG TMI: [Easing functions](http://easings.net/)  
+					LESS i: [CSS3 transition Property (W3Schools)](http://www.w3schools.com/cssref/css3_pr_transition.asp)
 				</section>
 
 				<section data-markdown>
 					# CSS ANIMATION: **5**
-					
-					## syntax
+
+					## TRANSFORM
 
 					```css
-					an-element {
-						animation: change-stuff 5s infinite; 
-					}
-					@keyframes change-stuff {
-						25% {
-							styles 1/4 way through;
-						}
-						50% {
-							styles 1/2 way through;
-						}
-						75% {
-							styles 3/4 way through;
-						}
-					}
+					`transform: rotate(70deg);`
 					```
+
+					**translate**: `translate(540px,-200px);`  
+					**rotate** `rotate(360deg)`  
+					**scale** `scale(???)`  
+					**skew**  `skew(??? ??? ???)`  
+					**MISSED ANY?**
+<!--TODO check-->
 				</section>
 
 				<section data-markdown>
@@ -242,7 +248,11 @@
 
 					## what is (not) animatable?
 
-					**not** `display: none|block`
+					**not** `display: none|block`  
+					a clickable thing that can be styled:  
+					:focus :blur :hover :active or the checkbox :checked
+<!--TODO refine-->
+					other stuff???
 				</section>
 
 				<section data-markdown>
@@ -252,7 +262,6 @@
 					— [Guil Hernandez (2012)](http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css)
 
 					- [CSS `will-change` is a last resort](https://developer.mozilla.org/en/docs/Web/CSS/will-change)
-
 					- [detailed hardware acceleration answer on StackOverflow](http://stackoverflow.com/a/26371807/123033)
 				</section>
 
@@ -261,6 +270,7 @@
 					
 					## some examples
 
+					- Example: [animated movie posters](http://demo.marcofolio.net/3d_animation_css3/)
 					- [Original Hover Effects](http://tympanus.net/Tutorials/OriginalHoverEffects/)
 					- [chessboard vacuum (Ana Tudor)](http://codepen.io/thebabydino/pen/FpAun?editors=0100)
 					- [Bending Effect - Page Flip (Fabrizio Bianchi)](http://codepen.io/fbrz/pen/whxbF)
@@ -285,9 +295,9 @@
 			</section>
 
 			<section data-markdown>
-					# I HAVE NO **** IDEA
+					# I HAVE NO \*\*\*\* IDEA
 
-					## HOW HE DID THIS
+					## HOW HE [DID](# "apart from JS and canvas") THIS 
 
 					[Responsive caaaaat (Masayuki Kido)](http://roxik.com/cat/)
 			</section>

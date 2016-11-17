@@ -158,13 +158,17 @@
 				<section data-markdown>
 					# CSS ANIMATION: **1**
 
-					The [CSS `animation` property](http://www.w3schools.com/cssref/css3_pr_animation.asp) binds a custom animation to an element identified by it’s selector e.g.
+					The [CSS `animation` property](http://www.w3schools.com/cssref/css3_pr_animation.asp) binds a custom `animation` to an element identified by it’s `selector` e.g.
 
 					```css
 					.see-this {
-					  animation: amination-name-here 5s infinite;
+					  animation: change-stuff 5s infinite;
 					}
 					```
+
+					(animation name, duration, how many times to run)
+
+					`infinite` runs forever, seconds/milliseconds limit time
 
 					The changes are user-defined in a separate  
 					`@keyframes` code block
@@ -197,18 +201,19 @@
 
 					## COMPONENTS
 
-					- transitions (things to change)
-					- transformations (shape-shifting)
-					- keyframes (custom timeline)
+					- **transitions** (things to change, has *timing*)
+					- **transformations** (shape-shifting, *no* timing)
+					- **keyframes** (composing *custom* timelines)
 
 					use separately or together
-<!--TODO clarify how transform and keyframes differ-->
+
+					[Early use of `transition` Dan Cederholm (2010)](http://alistapart.com/article/understanding-css3-transitions)
 				</section>
 
 				<section data-markdown>
 					# CSS ANIMATION: **4**
 
-					## TRANSITION
+					## TRANSITION  
 
 					changes CSS properties over a given time e.g.
 
@@ -231,15 +236,17 @@
 
 					## TRANSFORM
 
+					include in the element you want to transform, then change styles on hover/whatever
+
 					```css
-					`transform: rotate(70deg);`
+					transform: rotate(70deg);
 					```
 
-					**translate**: `translate(540px,-200px);`  
-					**rotate** `rotate(360deg)`  
-					**scale** `scale(???)`  
-					**skew**  `skew(??? ??? ???)`  
-					**MISSED ANY?**
+					**translate**: `translate(540px,-200px);` x, y  
+					**rotate** `rotate(360deg);`  
+					**scale** `scale(2, 0.5);` x, y  
+					**skew**  `skew(10deg);` x axis  
+					**matrix** `matrix(1, -0.3, 0, 1, 0, 0)` scaleX,skewY,skewX,scaleY,translateX,translateY
 <!--TODO check-->
 				</section>
 
@@ -248,15 +255,18 @@
 
 					## what is (not) animatable?
 
-					**not** `display: none|block`  
-					a clickable thing that can be styled:  
-					:focus :blur :hover :active or the checkbox :checked
-<!--TODO refine-->
-					other stuff???
+					**not** `display: none|block`
+
+					[Animatable CSS properties (W3Schools)](http://www.w3schools.com/CSSref/css_animatable.asp)  
+					
+					triggered by focus/hover/etc.… that can be styled e.g.:  
+					`:focus :blur :hover :active input[type=checkbox]:checked …`
 				</section>
 
 				<section data-markdown>
 					# CSS ANIMATION: **7**
+
+					## ONLY IF NECESSARY
 
 					“CSS animations, transforms and transitions are not automatically GPU accelerated, and instead execute from the browser’s slower software rendering engine. So what exactly forces the browser to swap to GPU mode? Many browsers provide GPU acceleration by means of certain CSS rules.”  
 					— [Guil Hernandez (2012)](http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css)
@@ -277,20 +287,6 @@
 					- css-solar-system (Codecademy) (local)
 					- rotating colour box (CodePen) (local)
 					- parallax scrolling: [Firewatch CSS-only version](http://codepen.io/samdbeckham/pen/OPXPNp)
-				</section>
-			</section>
-
-			<section data-markdown>
-					# TITLE
-			</section>
-
-			<section>
-				<section data-markdown class="left-align">
-					# TITLE: **1**
-				</section>
-
-				<section data-markdown>
-					# TITLE: **2**
 				</section>
 			</section>
 

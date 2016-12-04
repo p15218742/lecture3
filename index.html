@@ -199,7 +199,7 @@
             if ("WebSocket" in window) {
 							alert("WebSockets! They're Supported by your Browser!");
 							
-							// Let us open a web socket
+							// open a web socket
 							var ws = new WebSocket("ws://localhost:8080/echo");
 			
 							ws.onopen = function() {
@@ -401,7 +401,7 @@
 
 					## OBJECTS: **2**
 
-					A [JavaScript object](http://www.w3schools.com/js/js_objects.asp) contains a series of colon-separated name-value pairs (no comma after the last one!!):
+					A [JavaScript object](http://www.w3schools.com/js/js_objects.asp) contains a series of colon-separated name-value pairs (no comma after the last one!!) enclosed in curly braces `{}`:
 
 					```javascript
 					var car = {
@@ -520,7 +520,7 @@
 				{ src: 'plugin/zoom-js/zoom.js', async: true },
 				{ src: 'plugin/notes/notes.js', async: true }
 				// { src: 'plugin/menu/menu.js'}
-			],
+			]
 			// see https://github.com/denehyg/reveal.js-menu
 			// menu: {
 			// 	themes: false,

@@ -1,8 +1,8 @@
 # CTEC3905
 
-## Lecture 4
+## Lecture 5
 
-**17 November 2016**
+** 1 December 2016**
 
 This is the presentation for the fifth lecture, covering an introduction to JavaScript and a little about its history and current use.
 

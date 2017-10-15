@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/theme/moon.css"><!--beige-->
 	<link rel="stylesheet" href="lib/css/zenburn.css"><!-- syntax highlighting of code -->
 	<link rel="stylesheet" href="css/deveritt-reveal.css"><!-- custom styles -->
+	<link rel="stylesheet" href="css/websockets.css"><!-- websockets demo -->
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -35,7 +36,7 @@
 			<section data-markdown>
 				## CTEC3905: Front-End Web Development
 				
-				# **Lecture 5** 
+				# **Lecture 3** 
 
 				**Dave Everitt**: lectures & labs    
 				deveritt@dmu.ac.uk
@@ -44,82 +45,17 @@
 				fania.raczinski@dmu.ac.uk
 			</section>
 
-			<section>
-				<section data-markdown>
-					# Module Feedback: **1**
+			<section data-markdown>
+				# Last year's Feedback
 
-					![CTEC3905 module feedback graph 1](images/ctec3905-module-feedback-01.png)
-				</section>
-
-				<section data-markdown>
-					# Module Feedback: **2**
-
-					![CTEC3905 module feedback graph 2](images/ctec3905-module-feedback-02.png)
-				</section>
-
-				<section data-markdown>
-					# Module Feedback: **3**
-
-					The predominant points are:
-
-					- 2-hours labs give time to experiment
-					- lectures need to be shorter, or on a different time/day
-					- Re-think assignments (language-specific? Phase tests?)
-					- More basic step-by-step guidance
-					- More advanced JavaScript topics
-				</section>
+				- 2-hours labs give time to experiment
+				- lectures need to be shorter, or on a different time/day
+				- Re-think assignments (Phase tests?)
+				- More basic step-by-step guidance
+				- More advanced JavaScript topics
 			</section>
 
-			<section class="left-align">
-				<section data-markdown>
-					# REMINDERS 1: **AGAIN**
-
-					- **indent your code** properly (with 2 spaces)!
-					- **Assignment 0 is ongoing**—turn up! Stay in lectures!
-					- **Check your DMU email** 3 times a week
-					- **Visit the links** on Blackboard and in lecture slides
-				</section>
-
-				<section data-markdown>
-					# REMINDERS 2: **GIT**
-
-					## GIT’s not GitHub
-
-					We will **look at your commits** on GitHub as part of the assessment
-
-					**SO** if not already done:
-
-					- **get** a GitHub account (see [GitHub setup on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3488035_1 "get GitHub set up and working"))
-					- **install** GIT on your own machine See [Blackboard GIT info](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3474200_1 "some essential GIT links")
-					- **commit** at least one file now (blank index.html file will do)
-				</section>
-			</section>
-
-			<section class="left-align">
-				<section data-markdown>
-					# ASSIGNMENT PROJECT: **1**
-					
-					Deadline: *GitHub*, wk 23 (Fri 07/03/2017, 12 noon)
-					
-					- **Show an understanding** of web technologies
-					- **Structure** your code semantically
-					- **Format** your code neatly (2 spaces)
-					- **Usability** use IA and PARC
-					- **Progression** of code on GitHub
-					
-					**GET STARTED:** [Assignment details to follow on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3415918_1)
-				</section>
-
-				<section data-markdown>
-					# ASSIGNMENT PROJECT: **2**
-					
-					- Website front-end is the project
-					- can use a backend or API BUT not necessary
-					- If used, backend isn't marked
-					- Single-page app (SPA) or pages (or both)
-					- Commit regularly and push to GitHub
-				</section>
-			</section>
+<!-- JAVASCRIPT TEACHING -->
 
 			<section class="left-align">
 				<section data-markdown>
@@ -129,31 +65,227 @@
 
 					- form **validation** of user input
 					- handling **data** (e.g. JSON)
-					- interactive **user interfaces** and feedback
-					- web-based **apps** (mobile and desktop)
+					- interactive **user interfaces and feedback**
 					- web and mobile **frameworks**
+					- web-based **apps** (mobile and desktop)
+					- **Progressive Webapps** (on/offline/home screen…)
 					- **applications** built on web technologies
-					- **games** with HTML5 canvas ([HTML5 Games website](http://html5games.com/Best/702b9531-c136-437a-ab97-0b209d893b55))
-					- **3D animation** with canvas and [WebGL](http://caniuse.com/#feat=webgl
-) ([F1 car](http://helloracer.com/webgl/), [Aquarium](http://webglsamples.org/aquarium/aquarium.html))
 				</section>
-
 				<section data-markdown>
 					# JAVASCRIPT TEACHING: **2**
 
 					## There's a **lot** to learn
 					
-					Because this isn't a dedicated JavaScript module that covers everything, instead we will:
+					This is **not a dedicated JavaScript** module so instead we:
 					
 					- get you started with the **fundamentals**
 					- suggest some **good practice** with examples
-					- supply working code you can **experiment** with
+					- supply exercise code you can **experiment** with
 					- provide curated links to **online learning** materials  
 					- provide an **overview** of the current state of JS
-					- we won't cover Node, Web Sockets, *server stuff*…
+					- **we won't cover**: Node, Web Sockets, *server stuff*…
 				</section>
+				<section data-markdown>
+					# JAVASCRIPT TEACHING: **3**
 
+					## **VARIOUS** SKILLS/INTERESTS, **THE PLAN**
+
+					1. we supply **working examples** for experimentation
+					3. you follow online resources for **further learning**
+					3. you make **working examples** to use in your project
+					4. you build up a set of **re-usable js code** on GitHub
+					
+					---
+
+					We can't do detailed `code-fixing` in labs or by email!  
+					The learning process **is debugging/researching** issues.
+				</section>
+				<section data-markdown>
+					# JAVASCRIPT TEACHING: **4**
+
+					- After the JavaScript basics, **develop your own interests**.
+					- **Keep things simple**, make **one thing** work well first.
+					- Work out **how to use JavaScript** in your project  :
+						it can be practical/functional or a bit show-off-y
+					- Really want to learn a **JavaScript framework?** Start now:  
+						`let jsOmg = [Preact, Ember, Mithril, Vue];`  
+						Beyond the module scope, but general guidance is offered.
+						
+					---
+
+					Beware of **old/bad code** on the web!  
+					Check **dates**, **avoid inline JavaScript** in HTML…
+				</section>
+			</section>
+
+<!-- JAVASCRIPT EVOLUTION -->
+
+			<section class="left-align">
+				<section data-markdown>
+					# JAVASCRIPT EVOLUTION: **1**
+
+					was **created in 10 days** in May **1995** by [Brendan Eich](https://brendaneich.com/), then working at Netscape and now Mozilla. JavaScript was not always known as JavaScript: the original name was **Mocha**, a name chosen by [Marc Andreessen](http://www.biography.com/people/marc-andreessen-9542208), founder of [Netscape](https://www.engadget.com/2014/05/10/history-of-netscape/).
+
+					In 1995 the name became **LiveScript** then (after a trademark license from [Sun](https://www.oracle.com/sun/)) to **JavaScript**—a **marketing move** as Java was then very popular and was used in browsers. As a consequence, beginners still **confuse** the two languages. But **JavaScript IS NOT Java**!
+
+					[A Short History of JavaScript (W3C)](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
+				</section>
+				<section data-markdown class="crammed">
+					# JAVASCRIPT EVOLVES: **2**
+
+					- **1995:** JavaScript born as Mocha/LiveScript
+					- **1997:** ECMAScript standard established ([see ECMA](http://www.ecma-international.org/ "Standardization of Information and Communication Technology and Consumer Electronics: an international private (membership-based) non-profit standards organization for information and communication systems"))
+					- **1999:** ES3 - Microsoft discover www. IE5 everywhere.
+					- **2000–2005:** [XMLHttpRequest](https://hpbn.co/xmlhttprequest/) (AJAX): Outlook Web Access (2000), Gmail (2004), Google Maps (2005)
+					- **2009:** ES5 - the familiar JavaScript, with `forEach`, `Object.keys`, `Object.create` (for [Douglas](http://www.crockford.com/ "The man behind 'Javascript: The Good Parts'. Q: why do web notables have such s**t-looking websites? A: because 'look, I added a bit of CSS but design is really for p******s… errr… I mean people who don't write PROGRAMMING CODE!'") [Crockford](http://javascript.crockford.com/ "…and his JavaScript stuff")), and standard [JSON](http://www.w3schools.com/js/js_json_intro.asp "JSON: the nice introduction") ([JSON motherlode here](http://www.json.org/ "A big load of information about the rather unfortunately-numbered ECMA-404"))
+					- **2015:** ES6/ECMAScript2015 - mostly syntactic sugar, because no firm agreement on anything more radical
+
+					[Condensed from benmccormick.org](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
+				</section>
+				<section data-markdown>
+					# JAVASCRIPT EVOLVES: **3**
+
+					JavaScript is an *implementation* of ECMAScript
+
+					[ActionScript](http://www.adobe.com/devnet/actionscript.html "Remember Flash? And Adobe AIR") is/was another (["whatever happened to ES4?"](http://www.mikechambers.com/blog/2008/08/14/actionscript-3-and-ecmascript-4/ "YAWN. The whining."))
+
+					## The big, fat **ECMA standards** (PDF):
+
+					- [The ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf)
+					- [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
+					- [The ECMA JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
+				</section>
+				<section data-markdown class="crammed">
+					# JAVASCRIPT EVOLVES: **5**
+
+					## JQuery (a library)
+
+					Although we're not teaching it (various reasons), you will encounter [JQuery](https://jquery.com/)—a JavaScript library created from an [original concept by John Resig in 2005](http://ejohn.org/blog/selectors-in-javascript/) and [announced in 2006 at BarCampNYC](http://ejohn.org/blog/barcampnyc-wrap-up/).
+					
+					It simplified the syntax for accessing the DOM—one feature being the ability to select elements using CSS syntax:
+
+					```javascript
+					$( "#button-container button" ).on( "click", function( event ) {
+					  hiddenBox.show();
+					});
+					```
+					
+					Some web frameworks include JQuery (or a *light* version) alongside their own libraries.  
+				</section>
+				<section data-markdown class="ref-links ext-links">
+					# JAVASCRIPT EVOLVES: **6**
+
+					## ES6: JavaScript in **transition**
+					
+					e.g. `promise`[&nbsp;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "ext: example shows multiple fast clicking"), `const`[&nbsp;](), `let`[&nbsp;](https://davidwalsh.name/for-and-against-let "ext: for and against let"), `class`[&nbsp;](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes "ext: MDN classes"), … 
+
+					**ES5** established: concatenation &lt; sigh &gt;:
+					```javascript
+					var name = 'My name is ' + first + ' ' + last + '.'
+					```
+					**ES6** now: template Literals (interpolation). Note backticks:
+					```javascript
+					var name = `My name is ${first} ${last}.`
+					```
+
+					[Can I use ES6 without **Babel** in 2016 (Quora)](https://www.quora.com/Can-I-use-ES6-without-Babel-in-2016)  
+					[**ES6 support** (TL;DR warning! BIG table!)](http://kangax.github.io/compat-table/es6/)
+				</section>
+				<section data-markdown>
+					# JAVASCRIPT EVOLVES: **7**
+
+					## IF YOU WANT TO SEE THE **NEXT STEP**
+
+					…read the [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)  
+					—it's the basis of the ES2016 version of JavaScript.
+				</section>
+			</section>
+
+<!-- JAVASCRIPT: HOW IT WORKS -->
+
+			<section class="left-align">
+				<section data-markdown class="crammed">
+					# JAVASCRIPT: **0**
+
+					## How does JavaScript work?
+
+					- translated into **machine instructions** by the **syntax parser**
+					- creates a **global execution context** in the browser window…
+					- …with `window` as the global object and `this` as a special variable
+					- runs in an **event loop** to check if **user events** need **action**
+
+					**global** = not in a function, available **everywhere in a window**
+					
+					---
+
+					(Even with a blank JS file)
+				</section>
+				<section data-markdown>
+					# JAVASCRIPT: **1**
+
+					## How does JavaScript work?
+
+					- you use it to **access the Document Object Model** (DOM)
+					- you **make changes** and **get information** from the DOM
+
+					---
+
+					Demo: `document.getElementsByTagName('a');`
+					See [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction "Mozilla Web Docs")
+				</section>
+				<section data-markdown class="float-l-img">
+					# JAVASCRIPT: **2**
+
+					![](images/dom-model.svg)
+
+					The first few branches on a **Document Object Model** (DOM) tree
+
+					There are **parent**, **child** and **sibling** nodes
+
+					From: [Document Object Model Structure](http://www.corelangs.com/js/dom/domtree.html) (corelangs.com)
+				</section>
+				<section data-markdown class="smallhead">
+					# JAVASCRIPT: **2a**
+
+					![Document Object Model diagram with hand-drawn annotations](images/dom.png "From a JQuery course http://cs.wellesley.edu/~cs110/reading/DOM-JQ.html")
+				</section>
+				<section data-markdown class="crammed">
+					# JAVASCRIPT: **3**
+
+					## How does JavaScript work?
+
+					1. builds an **execution stack** to handle your code
+					2. executes your code **synchronously** (one thing at a time)
+					3. the browser adds user events (e.g. click) to an **event queue**
+					4. if the **execution stack** is empty…
+					5. …JavaScript **checks** the event queue for **actionable events**
+					
+					---
+
+					The browser does things *asynchronously* (**rendering the page**, making **HTTP calls**, storing **user events**…) while JavaScript handles things *synchronously*
+				</section>
+				<section data-markdown>
+					# JAVASCRIPT: **4**
+
+					## THE **EVENT LOOP**
+
+					For interaction in the browser, JavaScript runs in an **event loop**, so you can think in terms of **event handlers** that **listen** for events:
+					
+					``` javascript
+					myElement.addEventListener("id-name", do_stuff);
+					// WARNING: this ^ is an example, not executable code!
+					```
+
+					**CSS** can be triggered by focus/hover/checked etc., **JavaScript** can listen for **hundreds** of events:
+
+					This should get you thinking: [Web Event reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
+				</section>
+			</section>
+
+			<section>
+				<!-- USE NEW WEBSOCKET EXAMPLE (AND POINT OUT NO SERVER) -->
 				<section style="text-align: center;">
+					<h1>JAVASCRIPT EXAMPLES: <strong>1</strong></h1>
 					<button id="socket-to-me">…oh (quietly) BTW do I support web sockets?</button>
 
 					<script type="text/javascript">
@@ -189,164 +321,63 @@
           }
 					</script>
 				</section>
-
-				<section data-markdown>
-					# JAVASCRIPT TEACHING: **3**
-
-					## There's **still** a lot to learn
-					
-					With people at various skill/interest levels, here's the plan:
-
-					1. we supply **working examples** for experimentation
-					2. you build a set of **re-usable resources** on GitHub
-					3. use links given to online resources for **further learning**
-					4. after the basics, develop your own **line of interest**(.js)
-
-					We can't provide detailed `code-fixing` in the labs or by email! The learning process **is** debugging/researching issues.
+				<section class="websockets smallhead">
+					<h1>JAVASCRIPT EXAMPLES: <strong>1</strong></h1>
+					<main id="page-wrapper">
+						<div id="status">Web Socket connecting...</div>
+						<ul id="messages"></ul>
+						<form id="message-form" action="#" method="post">
+							<textarea id="message" placeholder="Send your message by WebSockets..." required></textarea>
+							<button type="submit">Send Message</button>
+							<button type="button" id="close">Close Connection</button>
+						</form>
+					</main>
+					<script src="js/app.js"></script>
 				</section>
-
 				<section data-markdown>
-					# JAVASCRIPT TEACHING: **4**
+					# JAVASCRIPT EXAMPLES: **2**
+					
+					A few examples of JavaScript for games and 3D
 
-					Beware of **old/bad code/tutorials** on the web!
-
-					- **build a library** of working JavaScript examples on GitHub
-					- **choose an aspect** of JavaScript you're interested in
-					- **work out how** to incorporate JavaScript in your project  
-					  (it can be practical/functional or a bit show-off-y)
-					- if you want to learn a **JavaScript framework** start now:  
-					  `let jsOmg = [React, Ember, Angular, Vue];`  
-					  Beyond the module's scope, but some guidance later on
+					- **games** with (mostly) HTML5 canvas - see [Js13kGames](http://js13kgames.com/ "A competition where the file size limit is 13 kilobytes")
+					- **3D animation** with HTML5 canvas and [WebGL](http://caniuse.com/#feat=webgl "CanIUse WebGL"):  
+					[Formula 1 car](http://helloracer.com/webgl/ "Driveable car model") | [interactive Aquarium](http://webglsamples.org/aquarium/aquarium.html "interactive fish and all that")
 				</section>
 			</section>
 
 			<section class="left-align">
 				<section data-markdown>
-					# JAVASCRIPT EVOLVES: **1**
-
-					was **created in 10 days** in May **1995** by [Brendan Eich](https://brendaneich.com/), then working at Netscape and now of Mozilla. JavaScript was not always known as JavaScript: the original name was **Mocha**, a name chosen by [Marc Andreessen](http://www.biography.com/people/marc-andreessen-9542208), founder of [Netscape](https://www.engadget.com/2014/05/10/history-of-netscape/).
-
-					In September 1995 the name changed to **LiveScript**, then in December (after a trademark license from [Sun](https://www.oracle.com/sun/)) to JavaScript—a **marketing move** at that time as Java was very popular. As a consequence, beginners have **confused** the two ever since.
-
-					[A Short History of JavaScript (W3C)](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
-				</section>
-
-				<section data-markdown class="crammed">
-					# JAVASCRIPT EVOLVES: **2**
-
-					- **1995:** JavaScript born as Mocha/LiveScript
-					- **1997:** ECMAScript standard established ([see ECMA](http://www.ecma-international.org/ "Standardization of Information and Communication Technology and Consumer Electronics: an international private (membership-based) non-profit standards organization for information and communication systems"))
-					- **1999:** ES3 - Microsoft discover www. IE5 everywhere.
-					- **2000–2005:** [XMLHttpRequest](https://hpbn.co/xmlhttprequest/) (AJAX): Outlook Web Access (2000), Gmail (2004), Google Maps (2005)
-					- **2009:** ES5 - the familiar JavaScript, with `forEach`, `Object.keys`, `Object.create` (for [Douglas](http://www.crockford.com/ "The man behind 'Javascript: The Good Parts'. Q: why do web notables have such s**t-looking websites? A: because 'look, I added a bit of CSS but design is really for p******s… errr… I mean people who don't write PROGRAMMING CODE!'") [Crockford](http://javascript.crockford.com/ "…and his JavaScript stuff")), and standard [JSON](http://www.w3schools.com/js/js_json_intro.asp "JSON: the nice introduction") ([JSON motherlode here](http://www.json.org/ "A big load of information about the rather unfortunately-numbered ECMA-404"))
-					- **2015:** ES6/ECMAScript2015 - mostly syntactic sugar, because no firm agreement on anything more radical
-
-					[Condensed from benmccormick.org](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
-				</section>
-
-				<section data-markdown>
-					# JAVASCRIPT EVOLVES: **3**
-
-					JavaScript is an *implementation* of ECMAScript
-
-					[ActionScript](http://www.adobe.com/devnet/actionscript.html "Remember Flash? And Adobe AIR") is/was another (["whatever happened to ES4?"](http://www.mikechambers.com/blog/2008/08/14/actionscript-3-and-ecmascript-4/ "YAWN. The whining."))
-
-					## The big, fat **ECMA standards** (PDF):
-
-					- [The ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf)
-					- [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
-					- [The ECMA JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
-				</section>
-
-				<section data-markdown class="crammed">
-					# JAVASCRIPT EVOLVES: **5**
-
-					## JQuery (a library)
-
-					Although we're not teaching it (various reasons), you will encounter [JQuery](https://jquery.com/)—a JavaScript library created from an [original concept by John Resig in 2005](http://ejohn.org/blog/selectors-in-javascript/) and [announced in 2006 at BarCampNYC](http://ejohn.org/blog/barcampnyc-wrap-up/).
-					
-					It simplified how JavaScript interfaces with the DOM—one feature being the ability to select elements using CSS syntax:
-
-					```javascript
-					$( "#button-container button" ).on( "click", function( event ) {
-					  hiddenBox.show();
-					});
-					```
-					
-					Some web frameworks include JQuery (or a *light* version) alongside their own libraries.  
-				</section>
-
-				<section data-markdown class="ref-links ext-links">
-					# JAVASCRIPT EVOLVES: **6**
-
-					## ES6: JavaScript in **transition**
-					
-					e.g. `promise`[&nbsp;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "ext: example shows multiple fast clicking"), `const`[&nbsp;](), `let`[&nbsp;](https://davidwalsh.name/for-and-against-let "ext: for and against let"), `class`[&nbsp;](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes "ext: MDN classes"), … 
-
-					**ES5** established: concatenation &lt; sigh &gt;:
-					```javascript
-					var name = 'My name is ' + first + ' ' + last + '.'
-					```
-					**ES6** now: template Literals (interpolation). Note backticks:
-					```javascript
-					var name = `My name is ${first} ${last}.`
-					```
-
-					[Can I use ES6 without **Babel** in 2016 (Quora)](https://www.quora.com/Can-I-use-ES6-without-Babel-in-2016)  
-					[**ES6 support** (TL;DR warning! BIG table!)](http://kangax.github.io/compat-table/es6/)
-				</section>
-
-				<section data-markdown>
-					# JAVASCRIPT EVOLVES: **7**
-
-					## IF YOU WANT TO SEE THE **NEXT STEP**
-
-					…read the [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)  
-					—it's the basis of the ES2016 version of JavaScript.
-				</section>
-
-			</section>
-
-			<section class="left-align">
-				<section data-markdown>
-					# JAVASCRIPT: **1**
-
-					## The browser event loop
-
-					Inside the browser, everything runs in an **event loop** so you think in terms of **event handlers** that **listen** for events:
-					
-					``` javascript
-					myElement.addEventListener("id-name", do_stuff);
-					```
-
-					While CSS can be triggered by focus/hover/etc., JavaScript can listen for **hundreds** of events:
-
-					Massive list: [Web Event reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
-				</section>
-
-				<section data-markdown>
-					# JAVASCRIPT: **2**
+					# JAVASCRIPT SYNTAX: **1**
 
 					## C-family style syntax
 					
 					familiar if you've used C-family languages:
 					
 					``` javascript
-					var myArray = ["C", "C++", "Java", "C#", "PHP", "andThat"];
+					let myArray = ["C", "C++", "Java", "C#", "PHP", "Perl"];
 					```
 					[Array methods (W3Schools)](http://www.w3schools.com/js/js_array_methods.asp)
 				</section>
+				<section data-markdown>
+					# JAVASCRIPT SYNTAX: **2**
 
-				<section data-markdown class="crammed ref-link">
+					## DYNAMIC TYPING
+					
+					- 6 **primitive types** (not objects):  
+						`undefined`, `null`, `boolean`, `number` (always a float), `string`, [`symbol` (ES6)](https://docs.microsoft.com/en-us/scripting/javascript/reference/symbol-object-javascript "For creating a unique identifier for object properties")
+					- JavaScript **works out the type** for a variable value
+					- you can change the value from **one type to another**
+				</section>
+				<section data-markdown class="crammed smalltext">
 					# JAVASCRIPT: **3**
 					
-					**var** and **let**
+					variable scope: **var** and **let**
 
 					```javascript
 					function demoLet() {
 						//tuce is *not* visible out here
-						for( let tuce = 0; tuce < 5; tuce++ ) {
-						  //tuce is only visible in here (and in the for())
+						for( let tuce = 0; tuce < 5; tuce+=1 ) {
+						  //tuce is only visible in here (in the for())
 						}
 						//tuce is *not* visible out here
 					}
@@ -360,53 +391,52 @@
 					```
 					[…difference between using “let” and “var” to declare a variable?](http://stackoverflow.com/a/11444416/123033)
 				</section>
+				<section data-markdown class="crammed smalltext">
+					# JAVASCRIPT: **4**
 
-				<section data-markdown class="crammed">
-					# JAVASCRIPT: **4a**
+					Everything in JavaScript is an **object** (a name:value pair)
 
-					## OBJECTS: **2**
-
-					A [JavaScript object](http://www.w3schools.com/js/js_objects.asp) contains a series of colon-separated name-value pairs (no comma after the last one!!) enclosed in curly braces `{}`:
+					A [JavaScript object](http://www.w3schools.com/js/js_objects.asp) contains a series of colon-separated **name:value** pairs (**no trailing comma** after the last!) enclosed in curly braces `{}`:
 
 					```javascript
 					var car = {
 						manufacturer: "Tesla",
 						model: "Model S",
-						range: "300",
+						range: {
+							normal: "360",
+							ludicrous: "200"
+						}
 						colour: "red",
 						start: function() {startMyCarStuffHere}
 					};
 					```
 
-					You can have an **array of objects**, which is similar to a common data format in JSON.
+					You can have an **array of objects** (also a common data format in JSON…).
 				</section>
-
-				<section data-markdown class="crammed">
-					# JAVASCRIPT: **4b**
-
-					## OBJECTS: **2**
-
-					"JavaScript’s object-literal syntax is so simple, flexible, and concise, it was adapted to become the dominant standard for client/server communication in the form of JSON, which is more compact and flexible than the XML that it replaced."
-
-					[Programming JavaScript Applications (Eric Elliott)](http://chimera.labs.oreilly.com/books/1234000000262/ch01.html)
-				</section>
-
-				<section data-markdown class="crammed">
-					# JAVASCRIPT: **5**
-
-					## JSON: **1**
-
-					[JSON](http://www.json.org/) is a compact **portable data format**, readable in many languages, added to databases, translated into/from (say) XML…
-
-					It is used in many APIs where you get the data from a remote server (say weather), and that data is recieved as JSON.
-
-					[JSON Placeholder has some good examples](https://jsonplaceholder.typicode.com/posts/1/comments) and can be used for development or learning. An **array** of **objects** is a common format.
-				</section>
-
 				<section data-markdown class="crammed">
 					# JAVASCRIPT: **5a**
 
+					## JSON: **1**
+
+					"JavaScript’s object-literal syntax is so simple, flexible, and concise, it was adapted to become the *dominant standard for client/server communication* in the form of **JSON**, which is more compact and flexible than the XML that it replaced."
+
+					[Programming JavaScript Applications (Eric Elliott)](http://chimera.labs.oreilly.com/books/1234000000262/ch01.html)
+				</section>
+				<section data-markdown class="crammed">
+					# JAVASCRIPT: **5b**
+
 					## JSON: **2**
+
+					[JSON](http://www.json.org/) (JavaScript Object Notation) is a compact **portable data format**, readable in many languages, added to databases, translated into/from (say) XML…
+
+					It is used in many **APIs** where you **get data from a remote server** (say weather), and that data is recieved as **JSON**.
+
+					[JSON Placeholder has some good examples](https://jsonplaceholder.typicode.com/posts/1/comments) and can be used for development or learning. An **array** of **objects** is a common format.
+				</section>
+				<section data-markdown class="crammed">
+					# JAVASCRIPT: **5c**
+
+					## JSON: **3**
 
 					A **value** can be a: **string, number, object, array, boolean, null**
 
@@ -424,15 +454,14 @@
 					}
 					```
 				</section>
-
 				<section data-markdown>
-					# JAVASCRIPT: **5**
+					# JAVASCRIPT: **6**
 
 					## THIS IS TAKING **TOO LONG!**
 
 					…and could become **somewhat complex**.
 
-					However, there will be **more example code** in the labs.
+					However, there will be **example code** in the labs.
 					
 					SO: (because this isn't a dedicated **JavaScript course**  
 					—it's a **front-end module**) for now, we leave you with…

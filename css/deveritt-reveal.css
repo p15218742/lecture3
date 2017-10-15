@@ -20,7 +20,7 @@ a:link { border-bottom: 2px solid #666; }
 }
 .reveal section img {
   margin: 15px 0px;
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
   background: rgba(255, 255, 255, .25);
   border: none;
   box-shadow: none;
@@ -40,8 +40,8 @@ button,
 .reveal .small-subheads h2 { font-size: 1.25em; margin: 0; }
 .reveal .small-subheads ul { padding-top: 0; }
 .reveal p small { font-size: 60% !important; }
-button,
-.ext-links a[title^="ext:"]:after {
+.slides button,
+.slides .ext-links a[title^="ext:"]:after {
   position: relative;
   text-decoration: none;
   font: .75em "FontAwesome";
@@ -56,4 +56,9 @@ button,
 }
 .float-r {
   float: right;
+}
+.float-l-img p img {
+  float: left;
+  margin-right: 1em;
+  margin-top: 0;
 }

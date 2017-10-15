@@ -1,0 +1,41 @@
+## GIT/GITHUB
+			<section data-markdown class="left-align">
+				# REMINDERS 2: **GIT**
+
+				## GIT’s not GitHub
+
+				We will **look at your commits** on GitHub as part of the assessment
+
+				**SO** if not already done:
+
+				- **get** a GitHub account (see [GitHub setup on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3488035_1 "get GitHub set up and working"))
+				- **install** GIT on your own machine See [Blackboard GIT info](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3474200_1 "some essential GIT links")
+				- **commit** at least one file now (blank index.html file will do)
+			</section>
+## ASSIGNMENT 2 GUIDE
+
+			<section class="left-align">
+				<section data-markdown>
+					# ASSIGNMENT PROJECT: **1**
+					
+					Deadline: *GitHub*, wk 23 (Fri 07/03/2017, 12 noon)
+					
+					- **Show an understanding** of web technologies
+					- **Structure** your code semantically
+					- **Format** your code neatly (2 spaces)
+					- **Usability** use IA and PARC
+					- **Progression** of code on GitHub
+					
+					**GET STARTED:** [Assignment details to follow on Blackboard](https://vle.dmu.ac.uk/webapps/blackboard/content/listContent.jsp?course_id=_441585_1&content_id=_3415918_1)
+				</section>
+
+				<section data-markdown>
+					# ASSIGNMENT PROJECT: **2**
+					
+					- Website front-end is the project
+					- can use a backend or API BUT not necessary
+					- If used, backend isn't marked
+					- Single-page app (SPA) or pages (or both)
+					- Commit regularly and push to GitHub
+				</section>
+			</section>

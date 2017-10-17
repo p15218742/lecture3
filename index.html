@@ -270,21 +270,23 @@
 
 					The browser does things *asynchronously* (**rendering the page**, making **HTTP calls**, storing **user events**…) while JavaScript handles things *synchronously*
 				</section>
-				<section data-markdown>
+				<section data-markdown class="smalltext">
 					# JAVASCRIPT: **4**
 
 					## THE **EVENT LOOP**
 
-					For interaction in the browser, JavaScript runs in an **event loop**, so you can think in terms of **event handlers** that **listen** for events:
+					For interaction in the browser, JavaScript runs in an **event loop**, so you can think in terms of **event handlers** that **listen** for events triggered by the user:
 					
 					``` javascript
-					myElement.addEventListener("id-name", do_stuff);
-					// WARNING: this ^ is an example, not executable code!
+					let myElement = document.getElementById("my-id")
+					myElement.addEventListener("event", do_stuff);
+					// myElement refers to the HTML tag with an id "my-id",
+					// the "event" could be "submit", "click", etc.
+					// do_stuff can be a function called after the event
 					```
 
-					**CSS** can be triggered by focus/hover/checked etc., **JavaScript** can listen for **hundreds** of events:
-
-					This should get you thinking: [Web Event reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
+					---
+					**CSS** can be triggered by focus/hover/checked etc., **JavaScript** can listen for **hundreds** of events: [Web Event reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
 				</section>
 			</section>
 

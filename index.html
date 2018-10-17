@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="css/theme/moon.css"><!--beige-->
 	<link rel="stylesheet" href="lib/css/zenburn.css"><!-- syntax highlighting of code -->
 	<link rel="stylesheet" href="css/deveritt-reveal.css"><!-- custom styles -->
-	<link rel="stylesheet" href="css/websockets.css"><!-- websockets demo -->
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -30,709 +29,675 @@
 
 </head>
 <body>
-	<div class="reveal">
-		<div class="slides">
+<div class="reveal">
+<div class="slides">
 
-			<section data-markdown>
-				## CTEC3905: Front-End Web Development
-				
-				# **Lecture 3** 
+	<section data-markdown>
+		## CTEC3905: Front-End Web Development
+		
+		# **Lecture 3** 
 
-				**Dave Everitt**: lectures & labs    
-				deveritt@dmu.ac.uk
+		**Dave Everitt**: lectures & labs    
+		deveritt@dmu.ac.uk
 
-				**Fania Raczinski**: labs  
-				fania.raczinski@dmu.ac.uk
-			</section>
+		**Fania Raczinski**: labs  
+		fania.raczinski@dmu.ac.uk
 
-			<section data-markdown>
-				# Last year's Feedback
-
-				- 2-hours labs give time to experiment
-				- lectures need to be shorter, or on a different time/day
-				- Re-think assignments (Phase tests?)
-				- More basic step-by-step guidance
-				- More advanced JavaScript topics
-			</section>
+		**Tarjana Yagnik**: labs  
+		tarjana.yagnik@dmu.ac.uk
+	</section>
 
 <!-- JAVASCRIPT TEACHING -->
 
-			<section class="left-align">
-				<section data-markdown>
-					# JAVASCRIPT TEACHING: **1**
+	<section class="left-align">
+		<section data-markdown>
+			# JAVASCRIPT TEACHING: **1**
 
-					## How is JavaScript used?
+			## There's a **lot** to learn
+			
+			This is **not a dedicated JavaScript** module so instead we:
+			
+			- get you started with the **fundamentals**
+			- highlight **good practice** with examples
+			- supply exercise code you can **experiment** with
+			- provide curated links to **online learning** materials  
+			- provide an **overview** of the current state of JS
+			- **we won't cover**: Node, Web Sockets, [JQuery](https://github.com/jquery/jquery/blob/master/src/core.js "JQuery source code is… JavaScript")…
+		</section>
+		<section data-markdown>
+			# JAVASCRIPT TEACHING: **2**
 
-					- form **validation** of user input
-					- handling **data** (e.g. JSON)
-					- interactive **user interfaces and feedback**
-					- web and mobile **frameworks**
-					- web-based **apps** (mobile and desktop)
-					- **Progressive Webapps** (on/offline/home screen…)
-					- **applications** built on web technologies
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT TEACHING: **2**
+			## **VARIOUS** SKILLS/INTERESTS, **THE PLAN**
 
-					## There's a **lot** to learn
-					
-					This is **not a dedicated JavaScript** module so instead we:
-					
-					- get you started with the **fundamentals**
-					- suggest some **good practice** with examples
-					- supply exercise code you can **experiment** with
-					- provide curated links to **online learning** materials  
-					- provide an **overview** of the current state of JS
-					- **we won't cover**: Node, Web Sockets, *server stuff*…
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT TEACHING: **3**
+			1. build on the **lab and lecture examples**
+			3. make **working examples** to re-use in your project
+			4. build up a set of **re-usable js code** on GitHub 
+			
+			---
 
-					## **VARIOUS** SKILLS/INTERESTS, **THE PLAN**
+			We can't do detailed `code-fixing` in labs or by email  
+			The real learning process **is debugging/researching**
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT TEACHING: **3**
 
-					1. we supply **working examples** for experimentation
-					3. you follow online resources for **further learning**
-					3. you make **working examples** to use in your project
-					4. you build up a set of **re-usable js code** on GitHub
-					
-					---
+      - After the JavaScript basics, **follow your interests**
+      - **Keep things simple**, make **one thing** work well first
+      - Work out **how to use JavaScript** in your project:  
+      it can be practical/functional or a bit clever
+      - check the **browser console** (f12) for errors
+      - always **validate your HTML** as you develop!
 
-					We can't do detailed `code-fixing` in labs or by email!  
-					The learning process **is debugging/researching** issues.
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT TEACHING: **4**
+      ---
 
-					- After the JavaScript basics, **develop your own interests**.
-					- **Keep things simple**, make **one thing** work well first.
-					- Work out **how to use JavaScript** in your project  :
-						it can be practical/functional or a bit show-off-y
-					- Really want to learn a **JavaScript framework?** Start now:  
-						`let jsOmg = [Preact, Ember, Mithril, Vue];`  
-						Beyond the module scope, but general guidance is offered.
-						
-					---
+      Check **dates** to avoid **old/bad code** on the web:  
+      
+      - ~~`var`~~ -> `let/const`
+      - ~~`onclick`~~ -> `addEventListener()`
+		</section>
+	</section>
 
-					Beware of **old/bad code** on the web!  
-					Check **dates**, **avoid inline JavaScript** in HTML…
-				</section>
-			</section>
+	<section data-markdown>
+    ## **`JavaScript !== Java;`**
+
+    this deserves its own %$@**& slide…
+	</section>
 
 <!-- JAVASCRIPT EVOLUTION -->
 
-			<section class="left-align">
-				<section data-markdown>
-					# JAVASCRIPT EVOLUTION: **1**
+	<section class="left-align">
+		<section data-markdown>
+      # JAVASCRIPT **HISTORY**: 01
 
-					was **created in 10 days** in May **1995** by [Brendan Eich](https://brendaneich.com/), then working at Netscape and now Mozilla. JavaScript was not always known as JavaScript: the original name was **Mocha**, a name chosen by [Marc Andreessen](http://www.biography.com/people/marc-andreessen-9542208), founder of [Netscape](https://www.engadget.com/2014/05/10/history-of-netscape/).
+      **created in 10 days** in May **1995** by [Brendan Eich](https://brendaneich.com/), then working at Netscape and now Mozilla. The original name was **Mocha**, a name chosen by [Marc Andreessen](http://www.biography.com/people/marc-andreessen-9542208), founder of [Netscape](https://www.engadget.com/2014/05/10/history-of-netscape/).
 
-					In 1995 the name became **LiveScript** then (after a trademark license from [Sun](https://www.oracle.com/sun/)) to **JavaScript**—a **marketing move** as Java was then very popular and was used in browsers. As a consequence, beginners still **confuse** the two languages. But **JavaScript IS NOT Java**!
+      In 1995 the name became **LiveScript** then, after a trademark license from [Sun](https://www.oracle.com/sun/) it became **JavaScript**—a **marketing move** as Java was then a popular way of running applets in browsers.
 
-					[A Short History of JavaScript (W3C)](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
-				</section>
-				<section data-markdown>
-					## `JavaScript !== Java;`
-				</section>
-				<section data-markdown class="crammed">
-					# JAVASCRIPT EVOLVES: **2**
+      **Beginners** still **confuse** the two languages.
 
-					- **1995:** JavaScript born as Mocha/LiveScript
-					- **1997:** ECMAScript standard established ([see ECMA](http://www.ecma-international.org/ "Standardization of Information and Communication Technology and Consumer Electronics: an international private (membership-based) non-profit standards organization for information and communication systems"))
-					- **1999:** ES3 - Microsoft discover www. IE5 everywhere.
-					- **2000–2005:** [XMLHttpRequest](https://hpbn.co/xmlhttprequest/) (AJAX): Outlook Web Access (2000), Gmail (2004), Google Maps (2005)
-					- **2009:** ES5 - the familiar JavaScript, with `forEach`, `Object.keys`, `Object.create` (for [Douglas](http://www.crockford.com/ "The man behind 'Javascript: The Good Parts'. Q: why do web notables have such s**t-looking websites? A: because 'look, I added a bit of CSS but design is really for p******s… errr… I mean people who don't write PROGRAMMING CODE!'") [Crockford](http://javascript.crockford.com/ "…and his JavaScript stuff")), and standard [JSON](http://www.w3schools.com/js/js_json_intro.asp "JSON: the nice introduction") ([JSON motherlode here](http://www.json.org/ "A big load of information about the rather unfortunately-numbered ECMA-404"))
-					- **2015:** ES6/ECMAScript2015 - mostly syntactic sugar, because no firm agreement on anything more radical
+      [A Short History of JavaScript (W3C)](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
+		</section>
+    <!-- SHARED WITH MEDS2007 LECTURE 04 -->
+		<section data-markdown class="crammed">
+      # JAVASCRIPT **HISTORY**: 02
 
-					[Condensed from benmccormick.org](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT EVOLVES: **3**
+      - **1995:** JavaScript created in 10 days as “Mocha”
+      - **1997:** ECMAScript standard established ([see ECMA](http://www.ecma-international.org/ "Standardization of Information and Communication Technology and Consumer Electronics: an international private (membership-based) non-profit standards organization for information and communication systems"))
+      - **1999:** ES3 - Microsoft discover www. IE5 everywhere.
+      - **2000–2005:** [XMLHttpRequest](https://hpbn.co/xmlhttprequest/) (AJAX): Outlook Web Access (2000), Gmail (2004), Google Maps (2005)
+      - **2009:** ES5 - established JavaScript, and standard [JSON](http://www.w3schools.com/js/js_json_intro.asp "JSON: the nice introduction")
+      - **2015:** ES6/ECMAScript2015 - some is syntactic sugar, no firm agreement on anything more radical yet
+      - **NOW:** [ES7/ECMAScript2016](http://exploringjs.com/es2016-es2017/ "Dr. Axel Rauschmayer is a trusted source on JavaScript") - go no further!
 
-					**JavaScript** is an *implementation* of **ECMAScript**
+      Reference: [benmccormick.org](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/) (2015)
+		</section>
+    <!-- END SHARED WITH MEDS2007 LECTURE 04 -->
+		<section data-markdown>
+			# JAVASCRIPT **HISTORY**: 03
 
-					[ActionScript](http://www.adobe.com/devnet/actionscript.html "Remember Flash? And Adobe AIR") is/was another (["whatever happened to ES4?"](http://www.mikechambers.com/blog/2008/08/14/actionscript-3-and-ecmascript-4/ "YAWN. The whining."))
+			**JavaScript** is an *implementation* of **ECMAScript**
 
-					## The big, fat **ECMA standards** (PDF):
+			[ActionScript](http://www.adobe.com/devnet/actionscript.html "Remember Flash? And Adobe AIR") is/was another (["whatever happened to ES4?"](http://www.mikechambers.com/blog/2008/08/14/actionscript-3-and-ecmascript-4/ "YAWN. The whining."))
 
-					- [The ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf)
-					- [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
-					- [The ECMA JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
-				</section>
-				<section data-markdown class="crammed smalltext">
-					# JAVASCRIPT EVOLVES: **5**
+			## The **ECMA standards** (PDFs):
 
-					## JQuery (a library)
+			- [The ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf)
+			- [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
+			- [The ECMA JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
+		</section>
+		<section data-markdown>
+			# JAVASCRIPT **HISTORY**: 04
 
-					Although we're not teaching it (various reasons), you will encounter [JQuery](https://jquery.com/)—a JavaScript library created from an [original concept by John Resig in 2005](http://ejohn.org/blog/selectors-in-javascript/) and [announced in 2006 at BarCampNYC](http://ejohn.org/blog/barcampnyc-wrap-up/). See [JQuery source code](https://github.com/jquery/jquery/blob/master/src/core.js).
-					
-					It simplified the syntax for accessing the DOM—one feature being the ability to select elements using CSS syntax:
+			## ES6: JavaScript in **transition**
+			
+			e.g. [`promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "ext: example shows multiple fast clicking"),
+			[`const`](https://blog.mariusschulz.com/2015/12/31/constant-variables-in-javascript-or-when-const-isnt-constant "ext: why const is not for constant values"),
+			[`let`](https://davidwalsh.name/for-and-against-let "ext: for and against let"),
+			[`modules`](http://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules "ext: really good chapter on modules"), … 
 
-					```javascript
-					$( "#button-container button" ).on( "click", function( event ) {
-					  hiddenBox.show();
-					});
-					```
-					
-					Some web frameworks include JQuery (or a *light* version) alongside their own libraries.  
-				</section>
-				<section data-markdown class="ref-links ext-links">
-					# JAVASCRIPT EVOLVES: **6**
+			~~**ES5** concatenation:~~
+			```javascript
+			var name = 'My name is ' + first + ' ' + last + '.'
+			```
+			**ES6** template Literals (interpolation). Note *backticks*:
+			```javascript
+			var name = `My name is ${first} ${last}.`
+			```
 
-					## ES6: JavaScript in **transition**
-					
-					e.g. `promise`[&nbsp;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "ext: example shows multiple fast clicking"),
-					`const`[&nbsp;](https://blog.mariusschulz.com/2015/12/31/constant-variables-in-javascript-or-when-const-isnt-constant "ext: why const is not for constant values"),
-					`let`[&nbsp;](https://davidwalsh.name/for-and-against-let "ext: for and against let"),
-					`class`[&nbsp;](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes "ext: MDN classes"), … 
-
-					**ES5** established: concatenation &lt; sigh &gt;:
-					```javascript
-					var name = 'My name is ' + first + ' ' + last + '.'
-					```
-					**ES6** now: template Literals (interpolation). Note backticks:
-					```javascript
-					var name = `My name is ${first} ${last}.`
-					```
-
-					[Can I use ES6 without **Babel** in 2016 (Quora)](https://www.quora.com/Can-I-use-ES6-without-Babel-in-2016)  
-					[**ES6 support** (TL;DR warning! BIG table!)](http://kangax.github.io/compat-table/es6/)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT EVOLVES: **7**
-
-					## IF YOU WANT TO SEE THE **NEXT STEP**
-
-					…read the [The ECMA-262 7th Edition / June 2016](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)  
-					—it's the basis of the ES2016 version of JavaScript.
-				</section>
-			</section>
+			See [ES6 browser support (TL;DR warning: BIG table!)](http://kangax.github.io/compat-table/es6/)
+		</section>
+	</section>
 
 <!-- JAVASCRIPT: HOW IT WORKS -->
 
-			<section class="left-align">
-				<section data-markdown class="crammed">
-					# JAVASCRIPT: **0**
+	<section class="left-align">
+		<section data-markdown>
+			# JS **HOW IT WORKS**: 1
 
-					## How does JavaScript work?
+			- translated into **machine instructions** by the **syntax parser**
+			- creates a **global execution context** in the browser window…
+			- …with `window` as the global object and `this` as a special variable
+			- runs in an **[event loop](#/4/5)** to check if **user events** need **action**
 
-					- translated into **machine instructions** by the **syntax parser**
-					- creates a **global execution context** in the browser window…
-					- …with `window` as the global object and `this` as a special variable
-					- runs in an **event loop** to check if **user events** need **action**
-
-					**global** = not in a function, available **everywhere in a window**
-					
-					---
-
-					(Even with a blank JS file)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT: **1**
-
-					## How does JavaScript work?
-
-					- you use it to **access the Document Object Model** (DOM)
-					- you **make changes** and **get information** from the DOM
-
-					---
-
-					Demo: `document.getElementsByTagName('a');`
-					See [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction "Mozilla Web Docs")
-				</section>
-				<section data-markdown class="float-l-img">
-					# JAVASCRIPT: **2**
-
-					![](images/dom-model.svg)
-
-					The first few branches on a **Document Object Model** (DOM) tree
-
-					There are **parent**, **child** and **sibling** nodes
-
-					From: [Document Object Model Structure](http://www.corelangs.com/js/dom/domtree.html) (corelangs.com)
-				</section>
-				<section data-markdown class="smallhead">
-					# JAVASCRIPT: **2a**
-
-					![Document Object Model diagram with hand-drawn annotations](images/dom.png "From a JQuery course http://cs.wellesley.edu/~cs110/reading/DOM-JQ.html")
-				</section>
-				<section data-markdown class="crammed">
-					# JAVASCRIPT: **3**
-
-					## How does JavaScript work?
-
-					1. builds an **execution stack** to handle your code
-					2. executes your code **synchronously** (one thing at a time)
-					3. the browser adds user events (e.g. click) to an **event queue**
-					4. if the **execution stack** is empty…
-					5. …JavaScript **checks** the event queue for **actionable events**
-					
-					---
-
-					The browser does things *asynchronously* (**rendering the page**, making **HTTP calls**, storing **user events**…) while JavaScript handles things *synchronously*
-				</section>
-				<section data-markdown class="smalltext">
-					# JAVASCRIPT: **4**
-
-					## THE **EVENT LOOP**
-
-					For interaction in the browser, JavaScript runs in an **event loop**, so you can think in terms of **event handlers** that **listen** for events triggered by the user:
-					
-					``` javascript
-					let myElement = document.getElementById("my-id")
-					myElement.addEventListener("event", do_stuff);
-					// myElement refers to the HTML tag with an id "my-id",
-					// the "event" could be "submit", "click", etc.
-					// do_stuff can be a function called after the event
-					```
-
-					---
-					**CSS** can be triggered by focus/hover/checked etc., **JavaScript** can listen for **hundreds** of events: [Web Event reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
-				</section>
-			</section>
-
-			<section>
-				<!-- <section style="text-align: center;">
-					<h1>JAVASCRIPT EXAMPLES: <strong>1</strong></h1>
-					<button id="socket-to-me">…oh (quietly) BTW do I support web sockets?</button>
-
-					<script type="text/javascript">
-					socketToMe = document.getElementById("socket-to-me");
-					socketToMe.addEventListener("click", WebSocketTest);
-
-					function WebSocketTest() {
-            if ("WebSocket" in window) {
-							alert("WebSockets! They're Supported by your Browser!");
-							
-							// open a web socket
-							var ws = new WebSocket("ws://localhost:8080/echo");
+			**global**: not in a function, available **everywhere in a window**
 			
-							ws.onopen = function() {
-								// Web Socket is connected, send data using send()
-								ws.send("Message to send");
-								alert("Message is sent...");
-							};
+			---
+
+			Even with an empty browser tab (or blank .js file) e.g. type `this.innerWidth;` into an empty browser console
+		</section>
+		<section data-markdown>
+      # JS **HOW IT WORKS**: 2
+
+      1. builds an **execution stack** to handle your code
+      2. executes your code **synchronously** (one thing at a time)
+      3. the browser adds user events (e.g. click) to an **event queue**
+      4. if the **execution stack** is empty…
+      5. …JavaScript **checks** the event queue for **actionable events**
+
+      ---
+
+      The browser does things *asynchronously* (**rendering the page**, making **HTTP calls**, storing **user events** in the queue…) while JavaScript handles things *synchronously*…
+
+      …except for `async` (see [js Goes Async](https://www.sitepoint.com/javascript-goes-asynchronous-awesome/) and [MDN/async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function))
+		</section>
+		<section data-markdown>
+      # JS **HOW IT WORKS**: 3
+
+      - you use it to access the **Document Object Model** (DOM)
+      - you **make changes** and **get information** from the DOM
+
+
+      Example:
+
+      ```css
+      a.highlight {
+      background: yellow;
+      }
+      ```
+      ```js
+      const myLinks = document.getElementsByTagName('a');
+
+      for(i=0; i < myLinks.length; i++){
+        myLinks[i].classList.add("highlight");
+      }
+
+      ```
+
+      See [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction "Mozilla Web Docs")
+		</section>
+		<section data-markdown class="float-l-img">
+			# JS **HOW IT WORKS**: 4
+
+			![](images/dom-model.svg)
+
+			The first few branches on a **Document Object Model** (DOM) tree
+
+			There are **parent**, **child** and **sibling** nodes
+
+			From: [Document Object Model Structure](http://www.corelangs.com/js/dom/domtree.html) (corelangs.com)
+		</section>
+		<section data-markdown>
+			# JS **HOW IT WORKS**: 5
+
+			![Document Object Model diagram with hand-drawn annotations](images/dom.png "From a JQuery course http://cs.wellesley.edu/~cs110/reading/DOM-JQ.html")
+		</section>
+    <!-- SHARED WITH MEDS2007 LECTURE 04 -->
+		<section data-markdown>
+      # JS **HOW IT WORKS**: 6
+
+      ## THE BROWSER EVENT LOOP
+
+      In a browser, everything runs in an **event loop** so you use **event listeners** to errr… **listen** for **events** triggered by the **user** or **other processes**:
+
+      ``` javascript
+      myElement.addEventListener("click", MyFunction);
+      ```
+
+      ---
+
+      While **CSS** can be triggered by focus/hover/etc.  
+      **JavaScript** can listen for **hundreds** of events.
+
+      See: [Web Event reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
+		</section>
+		<section data-markdown class="crammed">
+			# JS **HOW IT WORKS**: 7
+
+			## How is JavaScript used?
+
+			- form **validation** of user input
+			- handling **data** (e.g. **JSON**)
+			- interactive **user interfaces** and feedback
+			- web-based **apps** (mobile and desktop)
+			- web and mobile **frameworks**
+			- **applications** built on web technologies
+			- **games** with HTML5 canvas ([HTML5 Games website](http://html5games.com/Best/702b9531-c136-437a-ab97-0b209d893b55))
+			- **3D animation** with canvas and WebGL ([F1 car](http://helloracer.com/webgl/), [Aquarium](http://webglsamples.org/aquarium/aquarium.html))
+		</section>
+    <!-- END SHARED WITH MEDS2007 LECTURE 04 -->
+	</section>
+
+<!-- OKAY TO HERE -->
+
+<!-- JAVASCRIPT SYNTAX -->
+
+	<section class="left-align">
+		<section data-markdown>
+			# JAVASCRIPT SYNTAX: **1**
+		  
+			## Blank console in Chrome:
+
+			- type `about:blank` in the address bar
+			- type in JavaScript and **try things** out
+			- **shift-return**: new line without executing
+		</section>
+		<section data-markdown>
+      Want a demo, if there's time?
+
+      ![console log for experimenting with JavaScript](images/chrome-about-blank.png)
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **2**
+
+      ## C-family style syntax
+
+      familiar if you've used C-family languages:
+
+      ``` javascript
+      const myArray = ["C", "C++", "Ruby", "R", "Go", "Rust"];
+
+      // these aren't all C-family languages!
+      ```
+      [Array methods (W3Schools)](http://www.w3schools.com/js/js_array_methods.asp)
+		</section>
+		<section data-markdown>
+			# JAVASCRIPT SYNTAX: **3**
+
+			## DYNAMIC TYPING
 			
-							ws.onmessage = function (evt) { 
-								var received_msg = evt.data;
-								alert("Message is received...");
-							};
+			- 6 **primitive types** (not objects):  
+				`undefined`, `null`, `boolean`, `number` (always a float), `string`, [`symbol` (ES6)](https://docs.microsoft.com/en-us/scripting/javascript/reference/symbol-object-javascript "For creating a unique identifier for object properties")
+			- JavaScript **works out the type** for a variable value
+			- you can change a `let` value from **one type to another**
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **4**
+
+      ## VARIABLES (`var`), `let`, `const`
+
+      ```javascript
+      let greet, helloUser; // initialise two variables
+      greet = "hello";  // assign a value
+      let userInput = // get user input from the DOM  
+      helloUser = `Oh, ${greet} ${userInput}`;
+
+      let myVar = // can be: string, number, boolean
+      const myVar = // can be: array, object, function…
+
+      // compare values true/false:
+      myVar === myVar01; // same?
+      myVar !== myVar01; // different?
+      ```
+
+      `const` can store an **immutable type** (e.g. array, function), the **elements** or **properties** of which can change.
+
+      We will see that `let` has **tighter scope** than `var`…
+		</section>
+		<section data-markdown class="crammed smalltext">
+      # JAVASCRIPT SYNTAX: **5**
+
+      ## VARIABLE scope: **var** and **let**
+
+      ```javascript
+      function demoLet() {
+        //tuce is *not* visible out here
+        for( let tuce = 0; tuce < 5; tuce+=1 ) {
+          //tuce is only visible in here (in the for())
+        }
+        //tuce is *not* visible out here
+      }
+      function demoFor() {
+        //nish *is* visible out here
+        for( var nish = 0; nish < 5; nish++ ) {
+          //nish is visible to the whole function
+        }
+        //nish *is* visible out here
+      }
+      ```
+      […difference between using “let” and “var” to declare a variable?](http://stackoverflow.com/a/11444416/123033)
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **6**
+
+      ## FUNCTIONS
+      
+      function **declaration** or **expresssion** (see [MDN functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions))
+
+      ```javascript
+      function multiplyNums(x, y) {
+        return x * y;
+      }
+
+      // or as an arrow function:
+      const multiplyNums = (x, y) => x * y;
+      ```
+
+      Nearly everything in JavaScript is an **object**, including functions. So functions can be used anywhere you might use a variable, **including parameters in function calls**…
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **7**
+
+      ## **ARROW** FUNCTIONS: **COMPACT**
+
+      ```javascript
+      const multiplyNums = (x, y) => x * y;
+
+      const square = x => multiplyNums (x, x);
+
+      square(8);
+
+      const squares = [1,2,3,4,5];
+
+      squares.map(num => square(num));
+      // [1, 4, 9, 16, 25] much better than a for loop!
+      ```
+
+      …so you can use **function composition** - best with **pure functions** (same input, same output).
+
+      [MDN arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **8**
+
+      ## **PURE** FUNCTIONS: **COMPACT** AND **SAFE**
+
+      ```javascript
+      const hexagrams = square(8); // hexagrams is 64
+
+      console.log(`I Ching: always ${hexagrams} hexagrams!`);
+      // I Ching: always 64 hexagrams!
+      ```
+
+      A pure function with **parameters** in a template literal:
+
+      ```javascript
+      console.log(`This is not a ${square(4)}-bit laptop!`);
+      // This is not a 16-bit laptop!
+      ```
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **9**
+
+      ## **GENERATOR** FUNCTIONS\*
+
+      Example: a simple counter limiter
+
+      ```javascript
+      function* count () {
+        let index = 1;
+        while (index < 4) {
+          yield index++;
+        }
+      }
+      const upTo3 = count();
+
+      upTo3.next(); // value: 1, done: false
+      upTo3.next(); // value: 2, done: false
+      upTo3.next(); // value: 3, done: false
+      upTo3.next(); // value: undefined, done: true
+      ```
+		</section>
+		<section data-markdown class="crammed">
+			# JAVASCRIPT SYNTAX: **10**
+
+			## JavaScript [Math](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math "Moxilla Developer Netwrork detailed JS Math Reference") Object e.g.
+
+			```javascript
+			Math.round(4.5); // 5
+			Math.pow(8,2); Math.sqrt(64); // 64, 8
+			Math.abs(-4.7); // 4.7
+			Math.ceil(4.4); Math.floor(4.7); // 5, 4
+			Math.max(0, 150, 30, 20, -8, -200); // 150 (and min)
+			Math.random(); // a float from 0 to (almost) 1
+			Math.floor(Math.random() * 10); // number between 0 and 9
+			```
+
+			if you get `NaN` and you (know/want/think it is) a number:  
+			```javascript
+			parseFloat(aFloatYouThink); parseInt(AnIntegerYouThink);
+			```
+
+			Read W3Schools: [JavaScript Math Reference](http://www.w3schools.com/jsref/jsref_obj_math.asp),  
+			[JavaScript Number Methods](http://www.w3schools.com/js/js_number_methods.asp), 
+			[JavaScript Type Conversion Table](http://www.w3schools.com/jsref/jsref_type_conversion.asp)
+		</section>
+		<section data-markdown>
+			# JAVASCRIPT SYNTAX: **11**
+
+			### Array **[…]**
+
+			array literal - create and populate:
+
+			```javascript
+			const myArray = [1, 2, "free",  multiplyNums(8, 8)];
+			myArray[3]; // 64
+			```
+
+			**No comma** after the **last element**!
+
+			```javascript
+			const myArray = [1, 2, "free",  multiplyNums];
+			myArray[3](2, 2); // 4
+			```
+
+			**omit the trailing brackets()** in a function that has **no parameters** when it's inside an array - you can pass them later
+		</section>
+		<section data-markdown>
+			# JAVASCRIPT SYNTAX: **12**
+
+			### OBJECT **{…}** (ASSOCIATIVE ARRAY)
+
+			Contains **key value** pairs. This is declared as an 'object literal':  
 			
-							ws.onclose = function() { 
-								// websocket is closed.
-								alert("Connection is closed..."); 
-							};
-            } else {
-							// The browser doesn't support WebSocket
-							alert("WebSocket NOT supported by your Browser!");
-            }
-          }
-					</script>
-				</section> -->
-				<section class="websockets smallhead">
-					<h1>JAVASCRIPT EXAMPLES: <strong>1</strong></h1>
-					<main id="page-wrapper">
-						<div id="status">Web Socket connecting...</div>
-						<ul id="messages"></ul>
-						<form id="message-form" action="#" method="post">
-							<textarea id="message" placeholder="Send your message by WebSockets..." required></textarea>
-							<button type="submit">Send Message</button>
-							<button type="button" id="close">Close Connection</button>
-						</form>
-					</main>
-					<script src="js/app.js"></script>
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT EXAMPLES: **2**
-					
-					A few examples of JavaScript for games and 3D
-
-					- **games** with (mostly) HTML5 canvas - see [Js13kGames](http://js13kgames.com/ "A competition where the file size limit is 13 kilobytes")
-					- **3D animation** with HTML5 canvas and [WebGL](http://caniuse.com/#feat=webgl "CanIUse WebGL"):  
-					[Formula 1 car](http://helloracer.com/webgl/ "Driveable car model") | [interactive Aquarium](http://webglsamples.org/aquarium/aquarium.html "interactive fish and all that")
-				</section>
-			</section>
-
-			<section class="left-align">
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **0**
-				  
-					## Blank console in Chrome:
-
-					- type `about:blank` in the address bar
-					- type in JavaScript and try things out
-					- shift-return: new line without executing
-				</section>
-				<section data-markdown>
-					![console log for experimenting with JavaScript](images/chrome-about-blank.png)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **1**
-
-					## C-family style syntax
-					
-					familiar if you've used C-family languages:
-					
-					``` javascript
-					let myArray = ["C", "C++", "Java", "C#", "PHP", "Perl"];
-					```
-					[Array methods (W3Schools)](http://www.w3schools.com/js/js_array_methods.asp)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **2**
-
-					## DYNAMIC TYPING
-					
-					- 6 **primitive types** (not objects):  
-						`undefined`, `null`, `boolean`, `number` (always a float), `string`, [`symbol` (ES6)](https://docs.microsoft.com/en-us/scripting/javascript/reference/symbol-object-javascript "For creating a unique identifier for object properties")
-					- JavaScript **works out the type** for a variable value
-					- you can change the value from **one type to another**
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **3**
-
-					## VARIABLES
-
-					```javascript
-					let hello;
-					hello = "hello";  // assign a value
-					let userInput = // get user input from the DOM  
-					let helloUser = `${hello} ${userInput}`;
-					
-					let myVar = // can be: string, number, boolean
-					let myVar = // can be: array, object, function
-					
-					// compare values true/false:
-					myVar === myVar01; // same?
-					myVar !== myVar01; // different?
-					```
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **4**
-
-					## functions
-					
-					```javascript
-					function multiplyNums(x, y) {
-						return x * y;
-					}
-					```
-
-					Nearly everything in JavaScript is an **object**, including functions. So functions can be used anywhere you might use a variable, **including parameters in function calls**
-
-					[W3Schools JavaScript Functions](http://www.w3schools.com/js/js_functions.asp)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **5**
-
-					```javascript
-					let multiPly = multiplyNums(8, 8); // 64
-
-					console.log(`I Ching: always ${multiPly} hexagrams!`);
-					// I Ching: always 64 hexagrams!
-					```
-				</section>
-				<section data-markdown class="crammed">
-					# JAVASCRIPT SYNTAX: **6**
-
-					## JavaScript [Math](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math "Moxilla Developer Netwrork detailed JS Math Reference") Object e.g.
- 
-					```javascript
-					Math.round(4.5); // 5
-					Math.pow(8,2); Math.sqrt(64); // 64, 8
-					Math.abs(-4.7); // 4.7
-					Math.ceil(4.4); Math.floor(4.7); // 5, 4
-					Math.max(0, 150, 30, 20, -8, -200); // 150 (and min)
-					Math.random(); // a float from 0 to (almost) 1
-					Math.floor(Math.random() * 10); // number between 0 and 9
-					```
-
-					if you get `NaN` and you (know/want/think it is) a number:  
-					```javascript
-					parseFloat(aFloatYouThink); parseInt(AnIntegerYouThink);
-					```
-
-					Read W3Schools: [JavaScript Math Reference](http://www.w3schools.com/jsref/jsref_obj_math.asp),  
-					[JavaScript Number Methods](http://www.w3schools.com/js/js_number_methods.asp), 
-					[JavaScript Type Conversion Table](http://www.w3schools.com/jsref/jsref_type_conversion.asp)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **7**
-
-					### Array
-
-					array literal - create and populate:
-
-					```javascript
-					var myArray = [1, 2, "free",  multiplyNums(8, 8)];
-					myArray[3]; // 64
-					```
-
-					**No comma** after the **last element**!
-
-					```javascript
-					var myArray = [1, 2, "free",  multiplyNums];
-					myArray[3](2, 2); // 4
-					```
-
-					**No brackets** in a function as an array element!
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **8**
-
-					### Associative array (object)
-
-					Contains **key value** pairs. This is declared as an 'object literal':  
-					
-					```javascript
-					var myObject = {key1: 64, key2: "text"};
-					```
-
-					Access/change: **square brackets** or **dot** (property) syntax:
-					```javascript
-					alert(myObject['key2']);  
-					alert(myObject.key2);
-					myObject.key2 = 'More text';
-					```
-
-					add a new key/value pair:  
-					```javascript
-					myObject.key3 = Math.PI;
-					```
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **9**
-
-					Object keys look like names (like variables), but the *key is a string*, which allows expressions like this:
-
-					```javascript
-					console.log(myObject["key"+2]);
-					console.log(myObject["key2"]); // same as above
-					```
-
-					By the relaxed rules of JavaScript data typing `"key"+2` means `"key"+"2"` which evaluates to the string `"key2"`. So you can also specify keys as a string (like JSON):
-
-					```javascript
-					var myObject = {"key1": 64, "key2": "text"};
-					```
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **10**
-
-					## conditionals
-
-					```javascript
-					if (condition) {
-						// do stuff once here
-					}
-					```
-
-					```javascript
-					if (condition) {
-						// do stuff once here
-					} else {
-						// do something else once
-					}
-					```
-				</section>
-				<section data-markdown class="crammed">
-					# JAVASCRIPT SYNTAX: **11**
-
-					## loops **1** (for)
-					```javascript
-					let i = 0;
-					for (i = 0; i < 10; i += 1) {
-						// do stuff with i as a counter
-					}
-
-					for (i in myObject) {
-						console.log(myArray[i]);
-					}
-					```
-				</section>
-				<section data-markdown class="crammed">
-					# JAVASCRIPT SYNTAX: **12**
-
-					## loops **2** (while)
-
-					```javascript
-					while (condition) {
-						// IF condition is true do stuff until it's false
-					}
-					```
-
-					or
-
-					```javascript
-					do {
-						// some stuff at least once, then…
-					}
-					while (condition); // …do it again IF condition is true
-					```
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **13**
-
-					## switch/case
-
-					```javascript
-					switch (new Date().getDay()) {
-					  case 6:
-						  text = "Today is Saturday";
-						  break; 
-					  case 0:
-						  text = "Today is Sunday";
-						  break; 
-					  default: 
-						  text = "Looking forward to the Weekend";
-}
-					```
-
-					[W3Schools switch statment](http://www.w3schools.com/js/js_switch.asp)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT SYNTAX: **14**
-
-					## Object===ES6 class (syntactic sugar)
-
-					JavaScript uses a **prototypal inheritance model** with **object prototypes** as "classes". New objects inherit methods and attributes of their parent object through the prototype chain. It’s possible to modify an object’s prototype at any time, making JavaScript very flexible and dynamic.
-
-					[ES6 classes and JavaScript prototypes (Sebastian Porto)](https://reinteractive.com/posts/235-es6-classes-and-javascript-prototypes)  
-					[Think twice about ES6 classes (Christian Alfoni)](http://christianalfoni.github.io/javascript/2015/01/01/think-twice-about-classes.html)
-				</section>
-			</section>
-
-			<section class="left-align">
-				<section data-markdown class="crammed smalltext">
-					# MORE JS SYNTAX: **0**
-					
-					variable scope: **var** and **let**
-
-					```javascript
-					function demoLet() {
-						//tuce is *not* visible out here
-						for( let tuce = 0; tuce < 5; tuce+=1 ) {
-						  //tuce is only visible in here (in the for())
-						}
-						//tuce is *not* visible out here
-					}
-					function demoFor() {
-						//nish *is* visible out here
-						for( var nish = 0; nish < 5; nish++ ) {
-							//nish is visible to the whole function
-						}
-						//nish *is* visible out here
-					}
-					```
-					[…difference between using “let” and “var” to declare a variable?](http://stackoverflow.com/a/11444416/123033)
-				</section>
-				<section data-markdown class="crammed smalltext">
-					# MORE JS SYNTAX: **1**
-
-					Everything in JavaScript is an **object** (a name:value pair)
-
-					A [JavaScript object](http://www.w3schools.com/js/js_objects.asp) contains a series of colon-separated **name:value** pairs (**no trailing comma** after the last!) enclosed in curly braces `{}`:
-
-					```javascript
-					var car = {
-						manufacturer: "Tesla",
-						model: "Model S",
-						range: {
-							normal: "360",
-							ludicrous: "200"
-						}
-						colour: "red",
-						start: function() {startMyCarStuffHere}
-					};
-					```
-
-					You can have an **array of objects** (also a common data format in JSON…).
-				</section>
-			</section>
-
-			<section class="left-align">
-				<section data-markdown class="crammed">
-					# JSON SYNTAX: **0**
-
-					"JavaScript’s object-literal syntax is so simple, flexible, and concise, it was adapted to become the **dominant standard for client/server communication** in the form of **JSON**, which is more compact and flexible than the XML that it replaced."
-
-					[Programming JavaScript Applications (Eric Elliott)](http://chimera.labs.oreilly.com/books/1234000000262/ch01.html)
-				</section>
-				<section data-markdown class="crammed">
-					# JSON SYNTAX: **1**
-
-					[JSON](http://www.json.org/) (JavaScript Object Notation) is a compact **portable data format**, readable in many languages, added to databases, translated into/from (say) XML…
-
-					It is used in many **APIs** where you **get data from a remote server** (say weather), and that data is recieved as **JSON**.
-
-					[JSON Placeholder has some good examples](https://jsonplaceholder.typicode.com/posts/1/comments) and can be used for development or learning. An **array** of **objects** is a common format.
-				</section>
-				<section data-markdown class="crammed">
-					# JSON SYNTAX: **2**
-
-					A **value** can be a: **string, number, object, array, boolean, null**
-
-					```javascript
-					"menu": {
-						"id": "file",
-						"value": "File",
-						"popup": {
-							"menuitem": [
-								{"value": "New", "onclick": "CreateNewDoc()"},
-								{"value": "Open", "onclick": "OpenDoc()"},
-								{"value": "Close", "onclick": "CloseDoc()"}
-							]
-						}
-					}
-					```
-				</section>
-			</section>
-
-			<section>
-				<section data-markdown>
-					# JAVASCRIPT RESOURCES: **∞**
-
-					…some useful (ES5) stuff from another module leader:
-
-					[The JavaScript Object Model](http://teaching.ggstuart.com/lectures/js_oop.html#/overview)
-				</section>
-				<section data-markdown>
-					# JAVASCRIPT RESOURCES: **∞**
-
-					An excellent video introduction to the technical side [JavaScript: Understanding the Weird Parts - The First 3.5 Hours](https://www.youtube.com/watch?v=Bv_5Zv5c-Ts) —long, view in your own time.
-				</section>
-			</section>
-
-			<section class="left-align">
-				<section data-markdown class="crammed smallhead smalltext">
-					# JAVASCRIPT QUOTE **1**
-
-					> “I wrote this for those interested, so you can see clearly the sphere and swathe of influence JavaScript will command by the year 2020.
-					>
-					> “Unrealistic, you may think but only if you don't look beneath at road we are driving down. College lecturers mock students who consider turning in programming End-Of-Year projects in JavaScript. JavaScript will have the last Ha Ha on that!”
-					
-					[Why JavaScript will be king of Indie Games Development](http://www.moddb.com/forum/thread/why-javascript-will-be-king-of-indie-games-development-in-detail) :-)
-				</section>
-
-				<section data-markdown class="crammed smallhead smalltext">
-					# JAVASCRIPT QUOTE **2**
-
-					> “JavaScript is arguably the most important programming language on earth.
-					>
-					> “JavaScript, HTML, and CSS have become so prevalent that many operating systems have adopted the open web standards as the presentation layer for native apps, including [from] Windows 8, Firefox OS, Gnome, and Google's Chrome OS. Additionally … mobile devices support web views that allow them to incorporate JavaScript and HTML5 functionality into native applications.”
-
-					[The JavaScript Revolution](http://chimera.labs.oreilly.com/books/1234000000262/ch01.html)  
-					(Eric Elliott - Programming Javascript Applications)
-				</section>
-			</section>
-
-			<section data-markdown>
-				# CODE COMEDY
-				
-				If code was written like the  
-				[code that appears in stock photos](http://codepen.io/chriscoyier/post/code-in-stock-photos)  
-				—Chris Coyier
-		</div>
-	</div>
+			```javascript
+			const myObject = {key1: 64, key2: "text"};
+			```
+
+			Access/change: **square brackets** or **dot** (property) syntax:
+			```javascript
+			alert(myObject['key2']);  
+			alert(myObject.key2);
+			myObject.key2 = 'More text'; // change the value of key2
+			```
+
+			add a new key/value pair:  
+			```javascript
+			myObject.key3 = Math.PI;
+			```
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **13**
+
+      **Object keys** look like names (like variables), but actually the *key is a string*, which allows expressions like this:
+
+      ```javascript
+      let myKey = 2;
+
+      console.log(myObject["key"+myKey]);
+      console.log(myObject["key"+2]);
+      console.log(myObject["key2"]); // same as both above
+      ```
+
+      By the relaxed rules of JavaScript data typing `"key"+2` means `"key"+"2"` which evaluates to the string `"key2"`. So you can also specify keys as a string (as in **JSON** data):
+
+      ```javascript
+      var myObject = {
+        "key1": 64,
+        "key2": "text"
+      };
+      ```
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **14**
+
+      ## conditionals
+
+      ```javascript
+      if (condition is true) {
+        // do stuff once here
+      }
+      ```
+
+      ```javascript
+      if (condition is true) {
+        // do stuff
+      } else {
+        // condition is false, do other stuff
+      }
+      ```
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **15**
+
+      ## LOOPS **1** (FOR)
+      ```javascript
+      for (counter; condition; increment/decrement) {
+        // do stuff using the counter
+      }
+      ```
+
+      Example:
+
+      ```javascript
+      for (let i = 0; i < myArray.length; i += 1) {
+        console.log(myArray[i]);
+      }
+      ```
+		</section>
+		<section data-markdown class="crammed">
+      # JAVASCRIPT SYNTAX: **16**
+
+      ## LOOPS **2** (WHILE)
+
+      ```javascript
+      while (condition is true) {
+        // do stuff until it's false
+      }
+      ```
+
+      or
+
+      ```javascript
+      do {
+        // some stuff at least once, then…
+      }
+      while (condition); // …do it again IF condition is true
+      ```
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **17**
+
+      ## SWITCH/CASE
+
+      ```javascript
+      switch (new Date().getDay()) {
+        case 6:
+          text = "Today is Saturday";
+        break; 
+        case 0:
+          text = "Today is Sunday";
+        break; 
+        default: 
+          text = "Looking forward to the Weekend";
+      }
+      ```
+
+      [W3Schools switch statment](http://www.w3schools.com/js/js_switch.asp)
+		</section>
+		<section data-markdown>
+      # MORE JS SYNTAX: **18**
+
+      Everything in JavaScript is an **object** (`name:value` pair)
+
+      A [JavaScript object](http://www.w3schools.com/js/js_objects.asp) is a series of `name:value` pairs (**no comma** after the last item!) enclosed in curly braces `{}`
+
+      ```javascript
+      const car = {
+        manufacturer: "Tesla",
+        model: "Model S",
+        range: {
+          normal: "360",
+          ludicrous: "200"
+        },
+        colour: "red",
+        start: function() {startMyCarStuffHere}
+      };
+      car.range.normal; // 360
+      ```
+
+      An **array of objects** is a common **JSON** data format)
+		</section>
+		<section data-markdown>
+      # JAVASCRIPT SYNTAX: **19**
+
+      ## **OBJECT**===ES6 **CLASS** (+SYNTACTIC SUGAR)
+
+      > JavaScript uses a **prototypal inheritance model** with **object prototypes** as "classes". New objects inherit methods and attributes of their parent object through the prototype chain. It’s possible to modify an object’s prototype at any time, making JavaScript very flexible and dynamic.
+
+      [ES6 classes and JavaScript prototypes (Sebastian Porto)](https://reinteractive.com/posts/235-es6-classes-and-javascript-prototypes)  
+      **But** [Think twice about ES6 classes (Christian Alfoni)](http://christianalfoni.github.io/javascript/2015/01/01/think-twice-about-classes.html)
+		</section>
+	</section>
+
+	<section>
+		<section data-markdown>
+			# JAVASCRIPT RESOURCES: **∞**
+
+			…some useful (ES5) stuff from another module leader:
+
+			[The JavaScript Object Model](http://teaching.ggstuart.com/lectures/js_oop.html#/overview)
+		</section>
+		<section data-markdown>
+			# JAVASCRIPT RESOURCES: **∞**
+
+			An excellent (ES5) video introduction to the technical side [JavaScript: Understanding the Weird Parts - The First 3.5 Hours](https://www.youtube.com/watch?v=Bv_5Zv5c-Ts) —long, view in your own time.
+		</section>
+	</section>
+
+	<section class="left-align">
+		<section data-markdown class="crammed smallhead smalltext">
+			# JAVASCRIPT QUOTE **1**
+
+			> “I wrote this for those interested, so you can see clearly the sphere and swathe of **influence JavaScript will command by the year 2020**.
+			>
+			> “Unrealistic, you may think but only if you don't look beneath at road we are driving down. College lecturers mock students who consider turning in programming End-Of-Year projects in JavaScript. **JavaScript will have the last Ha Ha on that!**”
+			
+			[Why JavaScript will be king of Indie Games Development](http://www.moddb.com/forum/thread/why-javascript-will-be-king-of-indie-games-development-in-detail) :-)
+		</section>
+
+		<section data-markdown class="crammed smallhead smalltext">
+			# JAVASCRIPT QUOTE **2**
+
+			> “JavaScript is arguably the **most important programming language on earth**.
+			>
+			> “JavaScript, HTML, and CSS have become so prevalent that many operating systems have **adopted the open web standards** as the presentation layer for **native apps**, including Windows 8 [and beyond], Firefox OS, Gnome, and Google's Chrome OS.
+      >
+      > Additionally … mobile devices support **web views** that allow them to incorporate JavaScript and HTML5 functionality into **native applications**.”
+
+			[The JavaScript Revolution](http://chimera.labs.oreilly.com/books/1234000000262/ch01.html)  
+			(Eric Elliott - Programming Javascript Applications)
+		</section>
+	</section>
+
+	<section data-markdown>
+		# CODE COMEDY
+		
+		If code was written like the  
+		[code that appears in stock photos](http://codepen.io/chriscoyier/post/code-in-stock-photos)  
+		—Chris Coyier
+  </section>
+</div>
+</div>
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>

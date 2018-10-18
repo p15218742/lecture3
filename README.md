@@ -1,20 +1,18 @@
 # CTEC3905
 
-## Lecture 3
+## Lecture 3 [see slides](https://ctec3905.github.io/03-lecture/)
 
-**17 November 2017**
+**18 October 2018**
 
-This is the presentation for the third lecture, covering an introduction to JavaScript and a little about its history and current use.
+Main sections. Use the "down" arrow (bottom right of the slides) to view sub-sections (slides with an ellipsis "…")
 
-- [last year's feedback](https://ctec3905.github.io/lecture_03/#/1)
-- [JavaScript teaching](https://ctec3905.github.io/lecture_03/#/2)
-- [the evolution of JavaScript](https://ctec3905.github.io/lecture_03/#/3)
-- [introduction to JavaScript](https://ctec3905.github.io/lecture_03/#/4)
-- [JavaScript examples](https://ctec3905.github.io/lecture_03/#/5/1)
-- [introducing JavaScript syntax](https://ctec3905.github.io/lecture_03/#/6)
-- [JavaScript: var and let variable scope, objects](https://ctec3905.github.io/lecture_03/#/7)
-- [the JSON data format](https://ctec3905.github.io/lecture_03/#/8)
-- [JavaScript: Understanding the Weird Parts (video)](https://ctec3905.github.io/lecture_03/#/9/1)
-- [JavaScript quotes](https://ctec3905.github.io/lecture_03/#/10)
+- [JavaScript: teaching …](https://ctec3905.github.io/lecture_03/#/1)
+- [JavaScript: history …](https://ctec3905.github.io/lecture_03/#/3)
+- [JavaScript: how it works: …](https://ctec3905.github.io/lecture_03/#/4)
+- [JavaScript: syntax (18 sub-sections) …](https://ctec3905.github.io/lecture_03/#/5)
+- [JavaScript: objects (and and example) …](https://ctec3905.github.io/lecture_03/#/6)
+- [JavaScript: resources …](https://ctec3905.github.io/lecture_03/#/7)
+- [JavaScript: quotes …](https://ctec3905.github.io/lecture_03/#/8)
+- [Code comedy (link)](https://ctec3905.github.io/lecture_03/#/9)
 
-You can view it on the [GitHub page for Lecture 3](https://ctec3905.github.io/lecture_03/).
+Slides created in Markdown (plus HTML5, JavaScript and CSS) using [reveal.js](https://revealjs.com/).

@@ -33,6 +33,7 @@ button,
 .crammed ul,
 .crammed ol,
 .crammed p { font-size: .9em; }
+.smallcode pre code { font-size: 1em;  padding: 0.5em}
 .reveal .smalltext p,
 .reveal .smalltext ul,
 .reveal .smalltext table { font-size: .75em; }
